@@ -94,6 +94,68 @@ img {
 		}
 	}
 }
+
+/*Mainbox*/
+.mainbox {
+	&-desc {
+		max-width: 518px;
+		margin-left: 101px;
+		&__title {
+			font-size: 72px;
+			font-weight: 600;
+			line-height: 1.05;
+			margin-bottom: 41px;
+		}
+		&__subtitle {
+			color: $text-accent;
+			font-variation-settings: 'slnt' -10; //не italic, надо читать статью про переменные шрифты https://web.dev/articles/variable-fonts?hl=ru
+		}
+		&__text {
+			margin-bottom: 40px;
+		}
+		&__btn {
+			display: inline-block;
+			font-weight: 600;
+			color: $text-dark;
+			background-color: $text-light;
+			padding: 20px 78px;
+			border-radius: 100px;
+			position: relative;
+			transition: padding 0.5s;
+			&:hover, &:focus{
+				padding: 20px 88px 20px 68px;
+				&::after {
+					opacity: 1;
+				}
+			}
+			&::after {
+				transition: opacity 0.5s;
+				position: absolute;
+				left: 119px;
+				content: url(img/header_and_footer/coffee-cup.svg);
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				vertical-align: top;
+				opacity: 0;
+			}
+		}
+	}
+}
+/*Block-pages*/
+.header {
+	padding: 20px 40px 0;
+}
+.mainbox {
+	margin-top: 20px;
+	padding: 100px 0;
+	background-image: url(img/main/hero.jpg);
+	border-radius: 40px;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -30px;
+}
+
 /*italic*/
 /*font-variation-settings: 'slnt' 10; */
 /* font-variation-settings: 'ital' 1;*/

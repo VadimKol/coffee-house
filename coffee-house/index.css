@@ -91,6 +91,67 @@ img {
   vertical-align: top;
 }
 
+/*Mainbox*/
+.mainbox-desc {
+  max-width: 518px;
+  margin-left: 101px;
+}
+.mainbox-desc__title {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 41px;
+}
+.mainbox-desc__subtitle {
+  color: #B0907A;
+  font-variation-settings: "slnt" -10;
+}
+.mainbox-desc__text {
+  margin-bottom: 40px;
+}
+.mainbox-desc__btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #403F3D;
+  background-color: #E1D4C9;
+  padding: 20px 78px;
+  border-radius: 100px;
+  position: relative;
+  transition: padding 0.5s;
+}
+.mainbox-desc__btn:hover, .mainbox-desc__btn:focus {
+  padding: 20px 88px 20px 68px;
+}
+.mainbox-desc__btn:hover::after, .mainbox-desc__btn:focus::after {
+  opacity: 1;
+}
+.mainbox-desc__btn::after {
+  transition: opacity 0.5s;
+  position: absolute;
+  left: 119px;
+  content: url(img/header_and_footer/coffee-cup.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  opacity: 0;
+}
+
+/*Block-pages*/
+.header {
+  padding: 20px 40px 0;
+}
+
+.mainbox {
+  margin-top: 20px;
+  padding: 100px 0;
+  background-image: url(img/main/hero.jpg);
+  border-radius: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -30px;
+}
+
 /*italic*/
 /*font-variation-settings: 'slnt' 10; */
 /* font-variation-settings: 'ital' 1;*/
