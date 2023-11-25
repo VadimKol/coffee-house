@@ -15,14 +15,15 @@
 <body>
     <div class="header wrapper">
         <div class="nav">
-            <a class="nav__logo" href=""></a>
+            <a class="nav__logo" href="https://rolling-scopes-school.github.io/vadimkol-JSFE2023Q4/coffee-house/"></a>
             <ul class="nav-list">
-                <li><a class="nav-list__item" href="">Favorite coffee</a></li>
-                <li><a class="nav-list__item" href="">About</a></li>
-                <li><a class="nav-list__item" href="">Mobile app</a></li>
-                <li><a class="nav-list__item" href="">Contact us</a></li>
+                <li><a class="nav-list__item" href="#Favorite">Favorite coffee</a></li>
+                <li><a class="nav-list__item" href="#About">About</a></li>
+                <li><a class="nav-list__item" href="#Mobile">Mobile app</a></li>
+                <li><a class="nav-list__item" href="#Footer">Contact us</a></li>
             </ul>
-            <button class="nav__btn-menu" type="button">Menu<span class="nav__btn-menu-icon"></span></button>
+            <!--<button class="nav__btn-menu" type="button">Menu <span class="nav__btn-menu-icon"></span></button>-->
+            <a class="nav__btn-menu" href="https://rolling-scopes-school.github.io/vadimkol-JSFE2023Q4/coffee-house/menu">Menu <span class="nav__btn-menu-icon"></span></a>
         </div>
     </div>
     <div class="main wrapper">
@@ -33,7 +34,7 @@
                 <a class="mainbox-desc__btn btn-primary" href="">Menu</a>
             </div>
         </div>
-        <div class="favorite-coffee">
+        <div class="favorite-coffee" id="Favorite">
             <h2 class="favorite-coffee__title">Choose your <span class="favorite-coffee__subtitle">favorite</span> coffee</h2>
             <div class="slider">
                 <div class="slider-item">
@@ -63,7 +64,7 @@
                 <li class="controls__item"></li>
             </ul>
         </div>
-        <div class="about">
+        <div class="about" id="About">
             <h2 class="about__title">Resource is <span class="about__subtitle">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
             <div class="grid">
                 <!--7частей по горизонтали-->
@@ -73,7 +74,7 @@
                 <div class="grid-item grid-item-4"></div>
             </div>
         </div>
-        <div class="mobile-app">
+        <div class="mobile-app" id="Mobile">
             <div class="download">
                 <h2 class="download__title"><span class="download__subtitle">Download</span> our apps to start ordering</h2>
                 <p class="download__desc">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
@@ -85,7 +86,7 @@
             <img class="mobile-app__img" src="img/main/mobile-screens.png" alt="Mobiles">
         </div>
     </div>
-    <div class="footer wrapper">
+    <div class="footer wrapper" id="Footer">
         <div class="footerbox">
             <div class="footerbox-desc">
                 <h2 class="footerbox-desc__title white">Sip, Savor, Smile.<span class="mobile-app__subtitle">It’s coffee time!</span></h2>
