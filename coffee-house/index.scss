@@ -42,7 +42,6 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	//flex-wrap: wrap;
-	//margin-bottom: 600px;
 	&__logo {
 		flex-basis: 100px;
 		height: 60px;
@@ -152,7 +151,6 @@ img {
 
 /*Favorite-coffee*/
 .favorite-coffee {
-	margin-top: 100px;
 	position: relative;
 	&__title {
 		text-align: center;
@@ -166,82 +164,142 @@ img {
 		color: $text-accent;
 		font-variation-settings: 'slnt' -10;
 	}
-}
-.slider {
-	max-width: 480px;
-	margin: 0 auto;
-	&-item {
-		display: none;
-		text-align: center;
-		color: $text-dark;
-		&__pic {
-			width: 480px;
-		}
-		&__type {
-			margin: 21px 0 15px;
-		}
-		&__price {
-			margin:17px 0 39px;
-		}
-		&__type, &__price {
-			font-size: 24px;
-			font-weight: 600;
-			line-height: 1.25;
-		}
-		&--active {
-			display: block;
-		}
-	}
-	&-controls{
-		list-style-type: none;
-		display: flex;
-		justify-content: space-between;
-		max-width: 144px;
+	.slider {
+		max-width: 480px;
 		margin: 0 auto;
-		&__item {
-			background-color: $border-light;
-			width: 40px;
-			height: 4px;
-			border-radius: 100px;
+		&-item {
+			display: none;
+			text-align: center;
+			color: $text-dark;
+			&__pic {
+				width: 480px;
+			}
+			&__type {
+				margin: 21px 0 15px;
+			}
+			&__price {
+				margin:17px 0 39px;
+			}
+			&__type, &__price {
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 1.25;
+			}
 			&--active {
-				background-color: $border-dark;
+				display: block;
 			}
 		}
-	}
-	&__btn-left, &__btn-right {
-		height: 60px;
-		position: absolute;
-		top: 405px;
-		//border: 1px solid $border-dark; //можно через div сделать, чтобы при ховере углы не были доступны для клика, ведь они скруглены
-		//border-radius: 100%;
-		//svg {
-			//padding: 17px;
-		//}
-		svg {
-			fill: transparent;
-			transition: fill 0.5s;
+		&-controls{
+			list-style-type: none;
+			display: flex;
+			justify-content: space-between;
+			max-width: 144px;
+			margin: 0 auto;
+			&__item {
+				background-color: $border-light;
+				width: 40px;
+				height: 4px;
+				border-radius: 100px;
+				&--active {
+					background-color: $border-dark;
+				}
+			}
 		}
-		svg rect {
-			stroke: $border-dark;
-		}
-		svg path {
-			stroke: $text-dark;
-			transition: stroke 0.5s;
-		}
-		&:hover {
+		&__btn-left, &__btn-right {
+			height: 60px;
+			position: absolute;
+			top: 505px;
+			//border: 1px solid $border-dark; //можно через div сделать, чтобы при ховере углы не были доступны для клика, ведь они скруглены
+			//border-radius: 100%;
+			//svg {
+				//padding: 17px;
+			//}
 			svg {
-				fill: $border-dark;
+				fill: transparent;
+				transition: fill 0.5s;
+			}
+			svg rect {
+				stroke: $border-dark;
 			}
 			svg path {
-				stroke: $text-light;
+				stroke: $text-dark;
+				transition: stroke 0.5s;
+			}
+			&:hover {
+				svg {
+					fill: $border-dark;
+				}
+				svg path {
+					stroke: $text-light;
+				}
 			}
 		}
+		&__btn-left {
+			left: 4px;
+		}
+		&__btn-right {
+			right: 4px;
+		}
 	}
-	&__btn-left {
-		left: 4px;
+}
+
+/*About*/
+.about {
+	&__title {
+		font-size: 60px;
+		font-weight: 600;
+		line-height: 1.25;
+		color: $text-dark;
+		margin-bottom: 40px;
 	}
-	&__btn-right {
-		right: 4px;
+	&__subtitle {
+		color: $text-accent;
+		font-variation-settings: 'slnt' -10;
+	}
+	.grid {
+		display: grid;
+		grid-template-areas: "a b"
+							 "a b"
+							 "a b"
+							 "a d"
+							 "c d"
+							 "c d"
+							 "c d";
+		gap: 40px;
+		&-item {
+			border-radius: 20px;
+			width: 660px;
+			overflow: hidden;
+			position: relative;
+			&-1, &-4 {
+				height: 590px;
+				&__pic {
+					min-height: 590px;
+				}
+			}
+			&-2, &-3 {
+				height: 430px;
+				&__pic {
+					min-height: 430px;
+				}
+			}
+			&-1 {grid-area: a;}
+			&-2 {grid-area: b;}
+			&-3 {grid-area: c;}
+			&-4 {grid-area: d;}
+			&__pic {
+				max-width: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%) scale(1.1);
+				object-fit: cover;
+				transition: transform 0.5s;
+				&:hover, &:focus {
+					transform: translate(-50%,-50%) scale(1);
+				}
+			}
+		}
 	}
 }
 /*Block-pages*/
@@ -255,7 +313,9 @@ img {
     background-repeat: no-repeat;
     background-position: 0px -30px;
 }
-
+.favorite-coffee {
+	padding: 100px 0;
+}
 /*italic*/
 /*font-variation-settings: 'slnt' 10; */
 /* font-variation-settings: 'ital' 1;*/

@@ -151,7 +151,6 @@ img {
 
 /*Favorite-coffee*/
 .favorite-coffee {
-  margin-top: 100px;
   position: relative;
 }
 .favorite-coffee__title {
@@ -166,76 +165,135 @@ img {
   color: #B0907A;
   font-variation-settings: "slnt" -10;
 }
-
-.slider {
+.favorite-coffee .slider {
   max-width: 480px;
   margin: 0 auto;
 }
-.slider-item {
+.favorite-coffee .slider-item {
   display: none;
   text-align: center;
   color: #403F3D;
 }
-.slider-item__pic {
+.favorite-coffee .slider-item__pic {
   width: 480px;
 }
-.slider-item__type {
+.favorite-coffee .slider-item__type {
   margin: 21px 0 15px;
 }
-.slider-item__price {
+.favorite-coffee .slider-item__price {
   margin: 17px 0 39px;
 }
-.slider-item__type, .slider-item__price {
+.favorite-coffee .slider-item__type, .favorite-coffee .slider-item__price {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.25;
 }
-.slider-item--active {
+.favorite-coffee .slider-item--active {
   display: block;
 }
-.slider-controls {
+.favorite-coffee .slider-controls {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   max-width: 144px;
   margin: 0 auto;
 }
-.slider-controls__item {
+.favorite-coffee .slider-controls__item {
   background-color: #C1B6AD;
   width: 40px;
   height: 4px;
   border-radius: 100px;
 }
-.slider-controls__item--active {
+.favorite-coffee .slider-controls__item--active {
   background-color: #665F55;
 }
-.slider__btn-left, .slider__btn-right {
+.favorite-coffee .slider__btn-left, .favorite-coffee .slider__btn-right {
   height: 60px;
   position: absolute;
-  top: 405px;
+  top: 505px;
 }
-.slider__btn-left svg, .slider__btn-right svg {
+.favorite-coffee .slider__btn-left svg, .favorite-coffee .slider__btn-right svg {
   fill: transparent;
   transition: fill 0.5s;
 }
-.slider__btn-left svg rect, .slider__btn-right svg rect {
+.favorite-coffee .slider__btn-left svg rect, .favorite-coffee .slider__btn-right svg rect {
   stroke: #665F55;
 }
-.slider__btn-left svg path, .slider__btn-right svg path {
+.favorite-coffee .slider__btn-left svg path, .favorite-coffee .slider__btn-right svg path {
   stroke: #403F3D;
   transition: stroke 0.5s;
 }
-.slider__btn-left:hover svg, .slider__btn-right:hover svg {
+.favorite-coffee .slider__btn-left:hover svg, .favorite-coffee .slider__btn-right:hover svg {
   fill: #665F55;
 }
-.slider__btn-left:hover svg path, .slider__btn-right:hover svg path {
+.favorite-coffee .slider__btn-left:hover svg path, .favorite-coffee .slider__btn-right:hover svg path {
   stroke: #E1D4C9;
 }
-.slider__btn-left {
+.favorite-coffee .slider__btn-left {
   left: 4px;
 }
-.slider__btn-right {
+.favorite-coffee .slider__btn-right {
   right: 4px;
+}
+
+/*About*/
+.about__title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #403F3D;
+  margin-bottom: 40px;
+}
+.about__subtitle {
+  color: #B0907A;
+  font-variation-settings: "slnt" -10;
+}
+.about .grid {
+  display: grid;
+  grid-template-areas: "a b" "a b" "a b" "a d" "c d" "c d" "c d";
+  gap: 40px;
+}
+.about .grid-item {
+  border-radius: 20px;
+  width: 660px;
+  overflow: hidden;
+  position: relative;
+}
+.about .grid-item-1, .about .grid-item-4 {
+  height: 590px;
+}
+.about .grid-item-1__pic, .about .grid-item-4__pic {
+  min-height: 590px;
+}
+.about .grid-item-2, .about .grid-item-3 {
+  height: 430px;
+}
+.about .grid-item-2__pic, .about .grid-item-3__pic {
+  min-height: 430px;
+}
+.about .grid-item-1 {
+  grid-area: a;
+}
+.about .grid-item-2 {
+  grid-area: b;
+}
+.about .grid-item-3 {
+  grid-area: c;
+}
+.about .grid-item-4 {
+  grid-area: d;
+}
+.about .grid-item__pic {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.about .grid-item__pic:hover, .about .grid-item__pic:focus {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /*Block-pages*/
@@ -249,6 +307,10 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -30px;
+}
+
+.favorite-coffee {
+  padding: 100px 0;
 }
 
 /*italic*/
