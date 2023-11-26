@@ -5,7 +5,6 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 400;
-	//letter-spacing: $primarytracking;
 	color: $text-light;
 }
 h1, h2, h3, h4, h5, h6, ul, p {
@@ -24,6 +23,8 @@ button {
 	&:focus {
 		outline: none;
 	}
+	line-height: 1;
+	background-color: transparent;
 }
 img {
 	vertical-align: bottom;
@@ -54,6 +55,7 @@ img {
 		justify-content: space-between;
 		//flex-wrap: wrap;
 		//text-align: center;
+		transform: translate(-2px, -2px);
 		&__item {
 			cursor: default;
 		}
@@ -82,21 +84,23 @@ img {
 		}
 	}
 	&__btn-menu {
-		//line-height: 1.5; //need for button
-		//background-color: transparent; //need for button
 		cursor: pointer;
+		transform: translate(-4px, -2px);
 		&-icon{
 			display: inline-block;
 			width: 20px;
 			height: 20px;
 			background-image: url(img/header_and_footer/coffee-cup.svg);
 			vertical-align: top;
+			transform: translateX(5px);
 		}
 	}
 }
 
 /*Mainbox*/
 .mainbox {
+	margin-top: 20px;
+	border-radius: 40px;
 	&-desc {
 		max-width: 518px;
 		margin-left: 101px;
@@ -122,8 +126,11 @@ img {
 			border-radius: 100px;
 			position: relative;
 			transition: padding 0.5s;
+			transform: translateX(-1px);
+			padding-left: 79px;
 			&:hover, &:focus{
 				padding: 20px 88px 20px 68px;
+				padding-left: 69px;
 				&::after {
 					opacity: 1;
 				}
@@ -131,7 +138,7 @@ img {
 			&::after {
 				transition: opacity 0.5s;
 				position: absolute;
-				left: 119px;
+				left: 120px;
 				content: url(img/header_and_footer/coffee-cup.svg);
 				display: inline-block;
 				width: 20px;
@@ -142,15 +149,108 @@ img {
 		}
 	}
 }
+
+/*Favorite-coffee*/
+.favorite-coffee {
+	margin-top: 100px;
+	position: relative;
+	&__title {
+		text-align: center;
+		font-size: 60px;
+		font-weight: 600;
+		line-height: 1.25;
+		margin-bottom: 40px;
+		color: $text-dark;
+	}
+	&__subtitle {
+		color: $text-accent;
+		font-variation-settings: 'slnt' -10;
+	}
+}
+.slider {
+	max-width: 480px;
+	margin: 0 auto;
+	&-item {
+		display: none;
+		text-align: center;
+		color: $text-dark;
+		&__pic {
+			width: 480px;
+		}
+		&__type {
+			margin: 21px 0 15px;
+		}
+		&__price {
+			margin:17px 0 39px;
+		}
+		&__type, &__price {
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 1.25;
+		}
+		&--active {
+			display: block;
+		}
+	}
+	&-controls{
+		list-style-type: none;
+		display: flex;
+		justify-content: space-between;
+		max-width: 144px;
+		margin: 0 auto;
+		&__item {
+			background-color: $border-light;
+			width: 40px;
+			height: 4px;
+			border-radius: 100px;
+			&--active {
+				background-color: $border-dark;
+			}
+		}
+	}
+	&__btn-left, &__btn-right {
+		height: 60px;
+		position: absolute;
+		top: 405px;
+		//border: 1px solid $border-dark; //можно через div сделать, чтобы при ховере углы не были доступны для клика, ведь они скруглены
+		//border-radius: 100%;
+		//svg {
+			//padding: 17px;
+		//}
+		svg {
+			fill: transparent;
+			transition: fill 0.5s;
+		}
+		svg rect {
+			stroke: $border-dark;
+		}
+		svg path {
+			stroke: $text-dark;
+			transition: stroke 0.5s;
+		}
+		&:hover {
+			svg {
+				fill: $border-dark;
+			}
+			svg path {
+				stroke: $text-light;
+			}
+		}
+	}
+	&__btn-left {
+		left: 4px;
+	}
+	&__btn-right {
+		right: 4px;
+	}
+}
 /*Block-pages*/
 .header {
 	padding: 20px 40px 0;
 }
 .mainbox {
-	margin-top: 20px;
 	padding: 100px 0;
 	background-image: url(img/main/hero.jpg);
-	border-radius: 40px;
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px -30px;
