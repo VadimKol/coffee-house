@@ -53,11 +53,8 @@ img {
 		display: flex;
 		justify-content: space-between;
 		//flex-wrap: wrap;
-		//text-align: center;
 		transform: translate(-2px, -2px);
-		&__item {
-			cursor: default;
-		}
+		cursor: pointer;
 	}
 	&-list__item, &__btn-menu {
 		font-weight: 600;
@@ -111,7 +108,8 @@ img {
 		}
 		&__subtitle {
 			color: $text-accent;
-			font-variation-settings: 'slnt' -10; //не italic, надо читать статью про переменные шрифты https://web.dev/articles/variable-fonts?hl=ru
+			//не italic, надо читать статью про переменные шрифты https://web.dev/articles/variable-fonts?hl=ru
+			font-variation-settings: 'slnt' -10;
 		}
 		&__text {
 			margin-bottom: 40px;
@@ -217,20 +215,18 @@ img {
 			svg {
 				fill: transparent;
 				transition: fill 0.5s;
-			}
-			svg rect {
-				stroke: $border-dark;
-			}
-			svg path {
-				stroke: $text-dark;
-				transition: stroke 0.5s;
-			}
-			&:hover {
-				svg {
-					fill: $border-dark;
+				rect {
+					stroke: $border-dark;
 				}
-				svg path {
-					stroke: $text-light;
+				path {
+					stroke: $text-dark;
+					transition: stroke 0.5s;
+				}
+				&:hover {
+					fill: $border-dark;
+					path {
+						stroke: $text-light;
+					}
 				}
 			}
 		}
@@ -302,6 +298,166 @@ img {
 		}
 	}
 }
+
+/*Mobile*/
+.mobile-app {
+	display: flex;
+	justify-content: space-between;
+	.download {
+		flex-basis: 630px;
+		&__title {
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 1.25;
+			color: $text-dark;
+			margin: 144px 0 40px;
+		}
+		&__subtitle {
+			color: $text-accent;
+			font-variation-settings: 'slnt' -10;
+		}
+		&__desc {
+			color: $text-dark;
+		}
+		&-market {
+			list-style-type: none;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 40px;
+			max-width: 420px;
+			&__appstore svg, &__gplay svg {
+				fill: transparent;
+				transition: fill 0.5s;
+				rect {
+					stroke: $border-dark;
+				}
+				path {
+					fill: $text-dark;
+					transition: fill 0.5s;
+				}
+				&:hover {
+					fill: $border-dark;
+					path {
+						fill: $text-light;
+					}
+				}
+			}
+		}
+	}
+	&__img {
+		flex-basis: 630px;
+		height: 630px;
+	}
+}
+
+/*Footer*/
+.footerbox {
+	display: flex;
+	justify-content: space-between;
+	background-color: $border-dark;
+	box-sizing: content-box;
+	padding: 100px 100px 94px;
+	border-radius: 40px;
+	&-desc {
+		flex-basis: 530px;
+		&__title {
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 1.25;
+			color: $text-light;
+			margin-bottom: 40px;
+		}
+		&__subtitle {
+			color: $text-accent;
+			font-variation-settings: 'slnt' -10;
+		}
+		&-social {
+			list-style-type: none;
+			display: flex;
+			justify-content: space-between;
+			max-width: 204px;
+			&__item svg {
+				fill: transparent;
+				rect {
+					stroke: $border-light;
+					transition: fill 0.5s, stroke 0.5s;
+				}
+				path {
+					stroke: $text-light;
+					transition: stroke 0.5s;
+				}
+				&:hover {
+					rect {
+						stroke: $text-light;
+						fill: $text-light;
+					}
+					path {
+						stroke: $text-dark;
+					}
+				}
+			}
+		}
+	}
+	&-connect {
+		flex-basis: 265px;
+		margin-right: 265px;
+		&__title {
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 1.25;
+			margin-top: 33px;
+			margin-bottom: 39px;
+		}
+		&-list {
+			list-style-type: none;
+			li {
+				margin-bottom: 20px;
+			}
+			&__address, &__tel {
+				position: relative;
+				&:hover, &:focus {
+					&::after{
+						transform: scaleX(1);
+						opacity: 1;
+					}
+				}
+				&::after{
+					position: absolute;
+					pointer-events: none;
+					transition: transform 0.5s, opacity 0.5s;
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: $text-light;
+					transform: scaleX(0);
+					opacity: 0;
+				}
+			}
+			&__address, &__tel, &__worktime {
+				font-weight: 600;
+				color: $text-light;
+			}
+			&__address-icon, &__tel-icon, &__worktime-icon {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin-right: 8px;
+				vertical-align: top;
+			}
+			&__address-icon {
+				background-image: url(img/header_and_footer/pin-alt.svg);
+			}
+			&__tel-icon {
+				background-image: url(img/header_and_footer/phone.svg);
+			}
+			&__worktime-icon {
+				background-image: url(img/header_and_footer/clock.svg);
+			}
+		}
+	}
+}
+
 /*Block-pages*/
 .header {
 	padding: 20px 40px 0;
@@ -316,6 +472,12 @@ img {
 .favorite-coffee {
 	padding: 100px 0;
 }
-/*italic*/
-/*font-variation-settings: 'slnt' 10; */
-/* font-variation-settings: 'ital' 1;*/
+.about {
+	padding-bottom: 100px;
+}
+.mobile-app {
+	padding-bottom: 100px;
+}
+.footer {
+	padding: 0 40px 40px;
+}
