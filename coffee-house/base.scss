@@ -1,0 +1,38 @@
+/*Tags*/
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+	color: $text-light;
+	background-color: $text-light;
+}
+h1, h2, h3, h4, h5, h6, ul, p {
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+button {
+	padding: 0;
+	border:none;
+	&:hover {
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
+	}
+	line-height: 1;
+	background-color: transparent;
+}
+img {
+	vertical-align: bottom;
+}
+/*General*/
+.wrapper {
+	max-width: 1440px;
+	padding: 0 40px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
