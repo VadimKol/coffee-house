@@ -73,6 +73,7 @@
 				}
 				&::after{
 					position: absolute;
+					top: 26px;
 					pointer-events: none;
 					transition: transform 0.5s, opacity 0.5s;
 					content: '';

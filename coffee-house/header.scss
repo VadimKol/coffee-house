@@ -15,7 +15,7 @@
 		list-style-type: none;
 		display: flex;
 		justify-content: space-between;
-		transform: translate(-2px, -2px);
+		transform: translate(2px, -2px);
 	}
 	&-list__item, &__btn-menu {
 		cursor: pointer;
@@ -30,6 +30,7 @@
 		}
 		&::after{
 			position: absolute;
+			top: 26px;
 			pointer-events: none;
 			transition: transform 0.5s, opacity 0.5s;
 			content: '';
@@ -43,14 +44,15 @@
 	}
 	&__btn-menu {
 		cursor: pointer;
-		transform: translate(-4px, -2px);
+		transform: translate(5px, -2px);
 		&-icon{
 			display: inline-block;
 			width: 20px;
 			height: 20px;
 			background-image: url(img/header_and_footer/coffee-cup.svg);
 			vertical-align: top;
-			transform: translateX(5px);
+			margin-left: 9px;
+			transform: translateX(-4px);
 		}
 	}
 }
