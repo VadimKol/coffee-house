@@ -2,7 +2,7 @@
 @import "base";
 @import "header";
 @import "footer";
-.mainbox {
+.enjoy {
 	margin-top: 20px;
 	border-radius: 40px;
 	&-desc {
@@ -249,10 +249,10 @@
 }
 
 /*Block-pages*/
-.mainbox, .favorite-coffee {
+.enjoy, .favorite-coffee {
 	padding: 100px 0;
 }
-.mainbox {
+.enjoy {
 	background-image: url(img/main/hero.jpg);
 	background-size: cover;
     background-repeat: no-repeat;

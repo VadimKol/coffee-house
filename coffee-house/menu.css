@@ -333,6 +333,10 @@ img {
   border: 1px solid #C1B6AD;
   height: 504px;
   position: relative;
+  cursor: pointer;
+}
+.menu .grid-coffee-item:hover .grid-coffee-item-box__pic, .menu .grid-coffee-item:focus .grid-coffee-item-box__pic, .menu .grid-tea-item:hover .grid-coffee-item-box__pic, .menu .grid-tea-item:focus .grid-coffee-item-box__pic, .menu .grid-dessert-item:hover .grid-coffee-item-box__pic, .menu .grid-dessert-item:focus .grid-coffee-item-box__pic {
+  transform: translate(-50%, -50%) scale(1);
 }
 .menu .grid-coffee-item-box, .menu .grid-tea-item-box, .menu .grid-dessert-item-box {
   overflow: hidden;
@@ -348,9 +352,6 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   transition: transform 0.5s;
-}
-.menu .grid-coffee-item-box__pic:hover, .menu .grid-coffee-item-box__pic:focus, .menu .grid-tea-item-box__pic:hover, .menu .grid-tea-item-box__pic:focus, .menu .grid-dessert-item-box__pic:hover, .menu .grid-dessert-item-box__pic:focus {
-  transform: translate(-50%, -50%) scale(1);
 }
 .menu .grid-coffee-item__type, .menu .grid-tea-item__type, .menu .grid-dessert-item__type {
   margin: 21px 0px 11px 19px;
