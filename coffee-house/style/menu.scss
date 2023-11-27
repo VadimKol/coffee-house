@@ -1,0 +1,181 @@
+@import "variables";
+@import "base";
+@import "header";
+@import "footer";
+/*Some changes to header in menu*/
+.nav {
+    &__btn-menu{
+        user-select: none;
+        cursor: default;
+        transform: translate(1px, -2px);
+        &::after{
+            opacity: 1;
+            transform: scaleX(1);
+        }
+        &-icon {
+            transform: translateX(0px);
+        }
+    }
+    &-list {
+        transform: translate(0px, -2px);
+    }
+}
+
+/*Menu*/
+.menu {
+    &-desc {
+        &__title {
+            max-width: 870px;
+            margin: 20px auto 40px;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 1.25;
+            text-align: center;
+            color: $text-dark;
+        }
+        &__subtitle {
+            font-variation-settings: 'slnt' -10;
+            color: $text-accent;
+        }
+    }
+    &-tab {
+        display: flex;
+        justify-content: space-between;
+        max-width: 362px;
+        margin: 0 auto 34px;
+        list-style-type: none;
+        &__btn {
+            svg {
+                fill: transparent;
+                .circle-stroke {
+                    stroke: $border-light;
+                    transition: fill 0.5s, stroke 0.5s;
+                }
+                .circle-img {
+                    fill: $border-light;
+                    transition: fill 0.5s;
+                }
+                .text {
+                    fill: $text-dark;
+                    transition: fill 0.5s;
+                }
+                &:hover {
+                    .circle-stroke {
+                        stroke: $border-dark;
+                        fill: $border-dark;
+                    }
+                    .circle-img, .text {
+                        fill: $text-light;
+                    }
+                }
+            }
+            &--active {
+                &:hover, 
+                &:focus {
+                    user-select: none;
+                    cursor: default;
+                }
+                svg {
+                    fill: transparent;
+                    .circle-stroke {
+                        stroke: $border-dark;
+                        fill: $border-dark;
+                    }
+                    .circle-img, 
+                    .text {
+                        fill: $text-light;
+                    }
+                }
+            }
+        }
+    }
+    .grid {
+        margin-bottom: 100px;
+        &-coffee, 
+        &-dessert {
+            grid-template-areas: "a b c d"
+                                 "e f g h";
+            &-item {
+                &-1 {grid-area: a;}
+                &-2 {grid-area: b;}
+                &-3 {grid-area: c;}
+                &-4 {grid-area: d;}
+                &-5 {grid-area: e;}
+                &-6 {grid-area: f;}
+                &-7 {grid-area: g;}
+                &-8 {grid-area: h;}
+            }
+        }
+        &-tea {
+            grid-template-areas: "a b c d";
+            &-item {
+                &-1 {grid-area: a;}
+                &-2 {grid-area: b;}
+                &-3 {grid-area: c;}
+                &-4 {grid-area: d;}
+            }
+        }
+        &-coffee, 
+        &-tea, 
+        &-dessert {
+            display: none;
+            gap: 40px;
+            &-item {
+                position: relative;
+                width: 308px;
+                height: 504px;
+                border: 1px solid $border-light;
+                border-radius: 40px;
+                cursor: pointer;
+                &:hover, 
+                &:focus {
+                    .grid-coffee-item-box__pic {
+                        transform: translate(-50%,-50%) scale(1);
+                    }
+                }
+                &-box {
+                    position: relative;
+                    height: 309px;
+                    border-radius: 40px;
+                    overflow: hidden;
+                    &__pic {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 100%;
+                        min-height: 309px;
+                        transition: transform 0.5s;
+                        transform: translate(-50%,-50%) scale(1.1);
+                    }
+                }
+                &__type {
+                    margin: 21px 0px 11px 19px;
+                }
+                &__desc {
+                    margin: 0 18px 13px 19px;
+                }
+                &__price {
+                    margin-left: 19px;
+                    position: absolute;
+                    bottom: 18px;
+                }
+                &__type, 
+                &__price, 
+                &__desc {
+                    color: $text-dark;
+                }
+                &__type, 
+                &__price {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 1.25;
+                }
+            }
+        }
+        &-coffee {
+            &--active {
+                display: grid;
+            }
+        }
+    }
+}

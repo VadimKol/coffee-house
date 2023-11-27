@@ -1,0 +1,284 @@
+@import "variables";
+@import "base";
+@import "header";
+@import "footer";
+
+.enjoy {
+	margin-top: 20px;
+	border-radius: 40px;
+	&-desc {
+		max-width: 518px;
+		margin-left: 101px;
+		&__title {
+			margin-bottom: 41px;
+			font-size: 72px;
+			font-weight: 600;
+			line-height: 1.05;
+			color: $text-light;
+		}
+		&__subtitle {
+			font-variation-settings: 'slnt' -10;
+			color: $text-accent;
+		}
+		&__text {
+			margin-bottom: 40px;
+			color: $text-light;
+		}
+		&__btn {
+			position: relative;
+			display: inline-block;
+			padding: 20px 78px 20px 79px;
+			border-radius: 100px;
+			font-weight: 600;
+			color: $text-dark;
+			background-color: $text-light;
+			transition: padding 0.5s;
+			transform: translateX(-1px);
+			&:hover, 
+			&:focus {
+				padding: 20px 88px 20px 69px;
+				&::after {
+					opacity: 1;
+				}
+			}
+			&::after {
+				position: absolute;
+				left: 120px;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				vertical-align: top;
+				transition: opacity 0.5s;
+				opacity: 0;
+				content: url(../img/header_and_footer/coffee-cup.svg);
+			}
+		}
+	}
+}
+
+.favorite-coffee {
+	position: relative;
+	&__title {
+		margin-bottom: 40px;
+		font-size: 60px;
+		font-weight: 600;
+		line-height: 1.25;
+		text-align: center;
+		color: $text-dark;
+	}
+	&__subtitle {
+		font-variation-settings: 'slnt' -10;
+		color: $text-accent;
+	}
+	.slider {
+		max-width: 480px;
+		margin: 0 auto;
+		&-item {
+			display: none;
+			text-align: center;
+			color: $text-dark;
+			&__pic {
+				width: 480px;
+				height: 480px;
+			}
+			&__type {
+				margin: 21px 0 15px;
+			}
+			&__price {
+				margin:17px 0 39px;
+			}
+			&__type, &__price {
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 1.25;
+			}
+			&--active {
+				display: block;
+			}
+		}
+		&-controls {
+			display: flex;
+			justify-content: space-between;
+			max-width: 144px;
+			margin: 0 auto;
+			list-style-type: none;
+			&__item {
+				width: 40px;
+				height: 4px;
+				border-radius: 100px;
+				background-color: $border-light;
+				transition: background-color 0.5s;
+				&:hover, 
+				&:focus {
+					background-color: $border-dark;
+					cursor: pointer;
+				}
+				&--active {
+					background-color: $border-dark;
+					&:hover, 
+					&:focus {
+						user-select: none;
+						cursor: default;
+					}
+				}
+			}
+		}
+		&__btn-left, 
+		&__btn-right {
+			position: absolute;
+			top: 505px;
+			height: 60px;
+			svg {
+				fill: transparent;
+				transition: fill 0.5s;
+				rect {
+					stroke: $border-dark;
+				}
+				path {
+					stroke: $text-dark;
+					transition: stroke 0.5s;
+				}
+				&:hover {
+					fill: $border-dark;
+					path {
+						stroke: $text-light;
+					}
+				}
+			}
+		}
+		&__btn-left {
+			left: 4px;
+		}
+		&__btn-right {
+			right: 4px;
+		}
+	}
+}
+
+.about {
+	&__title {
+		margin-bottom: 40px;
+		font-size: 60px;
+		font-weight: 600;
+		line-height: 1.25;
+		color: $text-dark;
+	}
+	&__subtitle {
+		font-variation-settings: 'slnt' -10;
+		color: $text-accent;
+	}
+	.grid {
+		display: grid;
+		grid-template-areas: "a b"
+							 "a b"
+							 "a b"
+							 "a d"
+							 "c d"
+							 "c d"
+							 "c d";
+		gap: 40px;
+		&-item {
+			position: relative;
+			border-radius: 20px;
+			width: 660px;
+			overflow: hidden;
+			&-1, 
+			&-4 {
+				height: 590px;
+				&__pic {
+					min-height: 590px;
+				}
+			}
+			&-2, 
+			&-3 {
+				height: 430px;
+				&__pic {
+					min-height: 430px;
+				}
+			}
+			&-1 {grid-area: a;}
+			&-2 {grid-area: b;}
+			&-3 {grid-area: c;}
+			&-4 {grid-area: d;}
+			&__pic {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				max-width: 100%;
+				transition: transform 0.5s;
+				transform: translate(-50%,-50%) scale(1.1);
+				&:hover, 
+				&:focus {
+					transform: translate(-50%,-50%) scale(1);
+				}
+			}
+		}
+	}
+}
+
+.mobile-app {
+	display: flex;
+	justify-content: space-between;
+	.download {
+		flex-basis: 630px;
+		&__title {
+			margin: 144px 0 40px;
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 1.25;
+			color: $text-dark;
+		}
+		&__subtitle {
+			font-variation-settings: 'slnt' -10;
+			color: $text-accent;
+		}
+		&__desc {
+			color: $text-dark;
+		}
+		&-market {
+			display: flex;
+			justify-content: space-between;
+			max-width: 420px;
+			margin-top: 40px;
+			list-style-type: none;
+			&__appstore svg, 
+			&__gplay svg {
+				fill: transparent;
+				transition: fill 0.5s;
+				rect {
+					stroke: $border-dark;
+				}
+				path {
+					fill: $text-dark;
+					transition: fill 0.5s;
+				}
+				&:hover {
+					fill: $border-dark;
+					path {
+						fill: $text-light;
+					}
+				}
+			}
+		}
+	}
+	&__img {
+		flex-basis: 630px;
+		height: 630px;
+	}
+}
+
+/*Block-pages*/
+.enjoy,
+.favorite-coffee {
+	padding: 100px 0;
+}
+.enjoy {
+	background-image: url(../img/main/hero.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -30px;
+}
+.about,
+.mobile-app {
+	padding-bottom: 100px;
+}
