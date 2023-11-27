@@ -4,7 +4,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: #E1D4C9;
   background-color: #E1D4C9;
 }
 
@@ -160,6 +159,7 @@ img {
   line-height: 1.25;
   margin-top: 33px;
   margin-bottom: 39px;
+  color: #E1D4C9;
 }
 .footerbox-connect-list {
   list-style-type: none;
@@ -221,6 +221,7 @@ img {
   font-weight: 600;
   line-height: 1.05;
   margin-bottom: 41px;
+  color: #E1D4C9;
 }
 .enjoy-desc__subtitle {
   color: #B0907A;
@@ -228,6 +229,7 @@ img {
 }
 .enjoy-desc__text {
   margin-bottom: 40px;
+  color: #E1D4C9;
 }
 .enjoy-desc__btn {
   display: inline-block;

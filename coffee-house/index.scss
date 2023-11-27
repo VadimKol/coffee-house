@@ -13,6 +13,7 @@
 			font-weight: 600;
 			line-height: 1.05;
 			margin-bottom: 41px;
+			color: $text-light;
 		}
 		&__subtitle {
 			color: $text-accent;
@@ -20,6 +21,7 @@
 		}
 		&__text {
 			margin-bottom: 40px;
+			color: $text-light;
 		}
 		&__btn {
 			display: inline-block;
