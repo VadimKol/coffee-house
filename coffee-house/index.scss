@@ -104,8 +104,17 @@
 				width: 40px;
 				height: 4px;
 				border-radius: 100px;
+				transition: background-color 0.5s;
+				&:hover, &:focus {
+					cursor: pointer;
+					background-color: $border-dark;
+				}
 				&--active {
 					background-color: $border-dark;
+					&:hover, &:focus {
+						user-select: none;
+						cursor: default;
+					}
 				}
 			}
 		}

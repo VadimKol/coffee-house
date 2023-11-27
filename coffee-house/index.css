@@ -313,9 +313,18 @@ img {
   width: 40px;
   height: 4px;
   border-radius: 100px;
+  transition: background-color 0.5s;
+}
+.favorite-coffee .slider-controls__item:hover, .favorite-coffee .slider-controls__item:focus {
+  cursor: pointer;
+  background-color: #665F55;
 }
 .favorite-coffee .slider-controls__item--active {
   background-color: #665F55;
+}
+.favorite-coffee .slider-controls__item--active:hover, .favorite-coffee .slider-controls__item--active:focus {
+  user-select: none;
+  cursor: default;
 }
 .favorite-coffee .slider__btn-left, .favorite-coffee .slider__btn-right {
   height: 60px;
