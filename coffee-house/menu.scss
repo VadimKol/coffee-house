@@ -70,6 +70,10 @@
                 }
             }
             &--active {
+                &:hover, &:focus {
+                    user-select: none;
+                    cursor: default;
+                }
                 svg {
                     fill: transparent;
                     .circle-stroke {
