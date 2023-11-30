@@ -1,5 +1,11 @@
 /*Tags*/
+html,
 body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
@@ -34,4 +40,7 @@ img {
 	padding: 0 40px;
 	margin: 0 auto;
 	box-sizing: border-box;
+}
+.push-footer {
+	flex-grow: 1;
 }
