@@ -96,15 +96,16 @@
 
 @media screen and (max-width: 1439px) {
     .about {
-        .grid {
-            grid-template-areas: "a"
-                                 "d";
-            justify-content: center;
-            &-item {
-                &-2, 
-                &-3 {
-                    display: none;
-                }
+        padding-bottom: 0;
+    }
+    .about .grid {
+        grid-template-areas: "a"
+                             "d";
+        justify-content: center;
+        &-item {
+            &-2, 
+            &-3 {
+                display: none;
             }
         }
     }
@@ -115,6 +116,10 @@
         justify-content: center;
         .download {
             flex-basis: auto;
+            margin-bottom: 94px;
+            &__title {
+                margin: 100px 0 40px;
+            }
         }
     }
 }
@@ -153,24 +158,47 @@
             }
         }
     }
+    .favorite-coffee .slider {
+        &__btn-left {
+            left: 0px;
+        }
+        &__btn-right {
+            right: 0px;
+        }
+    }
+    .about .grid {
+        &-item {
+            width: 688px;
+            &__pic {
+                transform: translate(-50%, -50%) scale(1.055);
+                width: 688px;
+                height: 688px;
+            }
+        }
+    }
 }
 @media screen and (max-width: 817px) {
-    .enjoy {
-        &-desc {
-            margin-left: 60px;
-            &__btn {
-                //padding: 20px 88px 20px 69px;
+    .enjoy-desc {
+        margin-left: 60px;
+        &__btn {
+            //padding: 20px 88px 20px 69px;
+            padding: 20px 93px 20px 64px;
+            transform: translateX(0px);
+            &:hover {//заглушка, если ховерят на десктопе
                 padding: 20px 93px 20px 64px;
-                transform: translateX(0px);
-                &:hover {//заглушка, если ховерят на десктопе
-                    padding: 20px 93px 20px 64px;
-                }
-                &::after {
-                    opacity: 1;
-                    left: 116px;
-                    top: 22px;
-                }
             }
+            &::after {
+                opacity: 1;
+                left: 116px;
+                top: 22px;
+            }
+        }
+    }
+    .footerbox {
+        padding-left: 60px;
+        padding-bottom: 84px;
+        &-desc {
+            margin-bottom: 62px;
         }
     }
 }

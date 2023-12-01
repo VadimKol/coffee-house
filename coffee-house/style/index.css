@@ -307,9 +307,6 @@ img {
   content: url(../img/header_and_footer/coffee-cup.svg);
 }
 
-.favorite-coffee {
-  position: relative;
-}
 .favorite-coffee__title {
   margin-bottom: 40px;
   font-size: 60px;
@@ -321,6 +318,9 @@ img {
 .favorite-coffee__subtitle {
   font-variation-settings: "slnt" -10;
   color: #B0907A;
+}
+.favorite-coffee .slider-box {
+  position: relative;
 }
 .favorite-coffee .slider {
   max-width: 480px;
@@ -368,7 +368,7 @@ img {
 }
 .favorite-coffee .slider__btn-left, .favorite-coffee .slider__btn-right {
   position: absolute;
-  top: 505px;
+  top: 290px;
   height: 60px;
 }
 .favorite-coffee .slider__btn-left svg, .favorite-coffee .slider__btn-right svg {
@@ -442,6 +442,11 @@ img {
   max-width: 100%;
   transition: transform 0.5s;
   transform: translate(-50%, -50%) scale(1.1);
+  /*
+  	width: 688px;
+  	height: 688px;
+  	transform: translateY(-49px) scale(1.055);
+  */
 }
 
 .mobile-app {
