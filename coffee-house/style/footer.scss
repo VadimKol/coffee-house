@@ -3,13 +3,14 @@
 }
 .footerbox {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	box-sizing: content-box;
 	padding: 100px 100px 94px;
 	border-radius: 40px;
 	background-color: $border-dark;
 	&-desc {
 		flex-basis: 530px;
+		margin-right: 100px;
 		&__title {
 			margin-bottom: 40px;
 			font-size: 60px;
@@ -36,21 +37,11 @@
 					stroke: $text-light;
 					transition: stroke 0.5s;
 				}
-				&:hover {
-					rect {
-						stroke: $text-light;
-						fill: $text-light;
-					}
-					path {
-						stroke: $text-dark;
-					}
-				}
 			}
 		}
 	}
 	&-connect {
 		flex-basis: 265px;
-		margin-right: 265px;
 		&__title {
 			margin-top: 33px;
 			margin-bottom: 39px;
@@ -64,14 +55,9 @@
 			li {
 				margin-bottom: 20px;
 			}
-			&__address, &__tel {
+			&__address,
+			&__tel {
 				position: relative;
-				&:hover, &:focus {
-					&::after{
-						transform: scaleX(1);
-						opacity: 1;
-					}
-				}
 				&::after {
 					position: absolute;
 					top: 26px;
@@ -86,11 +72,15 @@
 					pointer-events: none;
 				}
 			}
-			&__address, &__tel, &__worktime {
+			&__address,
+			&__tel,
+			&__worktime {
 				font-weight: 600;
 				color: $text-light;
 			}
-			&__address-icon, &__tel-icon, &__worktime-icon {
+			&__address-icon,
+			&__tel-icon,
+			&__worktime-icon {
 				display: inline-block;
 				width: 20px;
 				height: 20px;

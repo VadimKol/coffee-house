@@ -27,9 +27,6 @@ button {
 	border:none;
 	line-height: 1;
 	background-color: transparent;
-	&:hover {
-		cursor: pointer;
-	}
 	&:focus {
 		outline: none;
 	}
