@@ -1,5 +1,186 @@
-@media screen and (max-width: 1439px) {
-    .enjoy {
-        background-position: 50% 50%;
+@import "variables";
+//@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
+    button {
+        &:hover {
+            cursor: pointer;
+        }
     }
+    .nav {
+        &-list__item,
+        &__btn-menu {
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+    .enjoy-desc__btn {
+        &:hover {
+            padding: 20px 88px 20px 69px;
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    .favorite-coffee .slider {
+		&-controls__item {
+            &:hover {
+                background-color: $border-dark;
+                cursor: pointer;
+            }
+            &--active {
+                &:hover {
+                    user-select: none;
+                    cursor: default;
+                }
+            }
+		}
+        &__btn-left, 
+        &__btn-right {
+            svg {
+                &:hover {
+                    fill: $border-dark;
+                    path {
+                        stroke: $text-light;
+                    }
+                }
+            }
+        }
+    }
+    .about .grid-item {
+        &__pic {
+            &:hover {
+                transform: translate(-50%,-50%) scale(1);
+            }
+        }
+    }
+    .mobile-app .download-market {
+        &__appstore svg, 
+        &__gplay svg {
+            &:hover {
+                fill: $border-dark;
+                path {
+                    fill: $text-light;
+                }
+            }
+        }
+    }
+    .footerbox {
+        &-desc-social__item svg {
+            &:hover {
+                rect {
+                    stroke: $text-light;
+                    fill: $text-light;
+                }
+                path {
+                    stroke: $text-dark;
+                }
+            }
+        }
+        &-connect-list {
+            &__address,
+            &__tel {
+                &:hover {
+                    &::after{
+                        transform: scaleX(1);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .about {
+        .grid {
+            grid-template-areas: "a"
+                                 "d";
+            justify-content: center;
+            &-item {
+                &-2, 
+                &-3 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1330px) {
+    .mobile-app {
+        flex-wrap: wrap;
+        justify-content: center;
+        .download {
+            flex-basis: auto;
+        }
+    }
+}
+@media screen and (max-width: 1181px) {
+    .footerbox {
+        justify-content: space-between;
+        &-desc {
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 1081px) {
+    .footerbox {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 835px) {
+    .nav {
+        &-list,
+        &__btn-menu {
+            display: none;
+        }
+        &-btn-mobile-equal {
+            display: block;
+        }
+        &--mobile {
+            .nav-list,
+            .nav__btn-menu {
+                display: block;
+            }
+            .nav-list__item,
+            .nav__btn-menu {
+				&:hover::after { //заглушка на десктопе
+					opacity: 0;
+				}
+            }
+        }
+    }
+}
+@media screen and (max-width: 817px) {
+    .enjoy {
+        &-desc {
+            margin-left: 60px;
+            &__btn {
+                //padding: 20px 88px 20px 69px;
+                padding: 20px 93px 20px 64px;
+                transform: translateX(0px);
+                &:hover {//заглушка, если ховерят на десктопе
+                    padding: 20px 93px 20px 64px;
+                }
+                &::after {
+                    opacity: 1;
+                    left: 116px;
+                    top: 22px;
+                }
+            }
+        }
+    }
+}
+.disable-btn,
+.disable-mobile {
+	display: none;
+}
+.active-btn {
+	display: block;
+}
+.active-mobile {
+	display: flex;
 }
