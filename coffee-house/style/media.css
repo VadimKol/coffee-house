@@ -35,6 +35,21 @@
   .mobile-app .download-market__appstore svg:hover path, .mobile-app .download-market__gplay svg:hover path {
     fill: #E1D4C9;
   }
+  .menu-tab__btn svg:hover .circle-stroke {
+    stroke: #665F55;
+    fill: #665F55;
+  }
+  .menu-tab__btn svg:hover .circle-img,
+  .menu-tab__btn svg:hover .text {
+    fill: #E1D4C9;
+  }
+  .menu-tab__btn--active:hover {
+    user-select: none;
+    cursor: default;
+  }
+  .menu .grid-coffee-item:hover .grid-coffee-item-box__pic, .menu .grid-tea-item:hover .grid-coffee-item-box__pic, .menu .grid-dessert-item:hover .grid-coffee-item-box__pic {
+    transform: translate(-50%, -50%) scale(1);
+  }
   .footerbox-desc-social__item svg:hover rect {
     stroke: #E1D4C9;
     fill: #E1D4C9;
@@ -58,6 +73,12 @@
   .about .grid-item-2, .about .grid-item-3 {
     display: none;
   }
+  .menu .grid-coffee, .menu .grid-dessert {
+    grid-template-areas: "a b c" "d e f";
+  }
+  .menu .grid-coffee-item-7, .menu .grid-coffee-item-8, .menu .grid-dessert-item-7, .menu .grid-dessert-item-8 {
+    display: none;
+  }
 }
 @media screen and (max-width: 1330px) {
   .mobile-app {
@@ -78,6 +99,21 @@
   }
   .footerbox-desc {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 1107px) {
+  .menu .grid {
+    margin-bottom: 40px;
+  }
+  .menu .grid-coffee, .menu .grid-dessert {
+    grid-template-areas: "a b" "c d";
+    justify-content: center;
+  }
+  .menu .grid-coffee-item-5, .menu .grid-coffee-item-6, .menu .grid-dessert-item-5, .menu .grid-dessert-item-6 {
+    display: none;
+  }
+  .menu .grid-add {
+    display: block;
   }
 }
 @media screen and (max-width: 1081px) {

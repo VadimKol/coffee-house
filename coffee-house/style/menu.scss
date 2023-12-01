@@ -19,8 +19,15 @@
     &-list {
         transform: translate(0px, -2px);
     }
+    
 }
-
+@media screen and (max-width: 835px) {//так как header и media общие, приходиться писать здесь
+    .nav--mobile .nav__btn-menu {
+        &::after {
+            opacity: 0;
+        }
+    }
+}
 /*Menu*/
 .menu {
     &-desc {
@@ -59,22 +66,8 @@
                     fill: $text-dark;
                     transition: fill 0.5s;
                 }
-                &:hover {
-                    .circle-stroke {
-                        stroke: $border-dark;
-                        fill: $border-dark;
-                    }
-                    .circle-img, .text {
-                        fill: $text-light;
-                    }
-                }
             }
             &--active {
-                &:hover, 
-                &:focus {
-                    user-select: none;
-                    cursor: default;
-                }
                 svg {
                     fill: transparent;
                     .circle-stroke {
@@ -127,12 +120,6 @@
                 border: 1px solid $border-light;
                 border-radius: 40px;
                 cursor: pointer;
-                &:hover, 
-                &:focus {
-                    .grid-coffee-item-box__pic {
-                        transform: translate(-50%,-50%) scale(1);
-                    }
-                }
                 &-box {
                     position: relative;
                     height: 309px;
@@ -175,6 +162,21 @@
         &-coffee {
             &--active {
                 display: grid;
+            }
+        }
+    }
+    .grid-add {
+        display: none;
+        width: 60px;
+        height: 60px;
+        border: 1px solid $border-dark;
+        border-radius: 100%;
+        margin: 0 auto 100px;
+        svg {
+            fill: transparent;
+            transform: translate(0px, 1px);
+            path {
+                stroke: $text-dark;
             }
         }
     }
