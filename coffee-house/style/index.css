@@ -442,6 +442,7 @@ img {
   max-width: 100%;
   transition: transform 0.5s;
   transform: translate(-50%, -50%) scale(1.1);
+  object-fit: cover;
   /*
   	width: 688px;
   	height: 688px;
@@ -476,6 +477,7 @@ img {
   max-width: 420px;
   margin-top: 40px;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 .mobile-app .download-market__appstore svg, .mobile-app .download-market__gplay svg {
   fill: transparent;
