@@ -156,10 +156,10 @@
 							 "c d"
 							 "c d";
 		gap: 40px;
+		grid-template-columns: 1fr 1fr;
 		&-item {
 			position: relative;
 			border-radius: 20px;
-			width: 660px;
 			overflow: hidden;
 			&-1, 
 			&-4 {

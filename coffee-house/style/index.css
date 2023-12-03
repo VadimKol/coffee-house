@@ -404,11 +404,11 @@ img {
   display: grid;
   grid-template-areas: "a b" "a b" "a b" "a d" "c d" "c d" "c d";
   gap: 40px;
+  grid-template-columns: 1fr 1fr;
 }
 .about .grid-item {
   position: relative;
   border-radius: 20px;
-  width: 660px;
   overflow: hidden;
 }
 .about .grid-item-1, .about .grid-item-4 {

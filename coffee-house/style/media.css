@@ -66,13 +66,6 @@
   .about {
     padding-bottom: 0;
   }
-  .about .grid {
-    grid-template-areas: "a" "d";
-    justify-content: center;
-  }
-  .about .grid-item-2, .about .grid-item-3 {
-    display: none;
-  }
   .menu .grid-coffee, .menu .grid-dessert {
     grid-template-areas: "a b c" "d e f";
   }
@@ -122,28 +115,11 @@
   }
 }
 @media screen and (max-width: 835px) {
-  .nav-list, .nav__btn-menu {
-    display: none;
-  }
-  .nav-btn-mobile-equal {
-    display: block;
-  }
-  .nav--mobile .nav-list,
-  .nav--mobile .nav__btn-menu {
-    display: block;
-  }
-  .nav--mobile .nav-list__item:hover::after,
-  .nav--mobile .nav__btn-menu:hover::after {
-    opacity: 0;
-  }
   .favorite-coffee .slider__btn-left {
     left: 0px;
   }
   .favorite-coffee .slider__btn-right {
     right: 0px;
-  }
-  .about .grid-item {
-    width: 688px;
   }
   .about .grid-item__pic {
     transform: translate(-50%, -50%) scale(1.055);
@@ -175,7 +151,30 @@
     margin-bottom: 62px;
   }
 }
-@media screen and (max-width: 784px) {
+@media screen and (max-width: 768px) {
+  .nav-list, .nav__btn-menu {
+    display: none;
+  }
+  .nav-btn-mobile-equal {
+    display: block;
+  }
+  .nav--mobile .nav-list,
+  .nav--mobile .nav__btn-menu {
+    display: block;
+  }
+  .nav--mobile .nav-list__item:hover::after,
+  .nav--mobile .nav__btn-menu:hover::after {
+    opacity: 0;
+  }
+  .about .grid {
+    grid-template-areas: "a" "d";
+    grid-template-columns: 1fr;
+  }
+  .about .grid-item-2, .about .grid-item-3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
   .wrapper {
     padding-left: 16px;
     padding-right: 16px;
@@ -212,9 +211,6 @@
   .about__title {
     font-size: 32px;
   }
-  .about .grid-item {
-    width: 468px;
-  }
   .mobile-app .download__title {
     font-size: 32px;
   }
@@ -234,14 +230,6 @@
   }
 }
 @media screen and (max-width: 565px) {
-  .about .grid-item {
-    width: 348px;
-  }
-  .about .grid-item__pic {
-    width: 726px;
-    height: 726px;
-    transform: translate(-50%, -50%) scale(1);
-  }
   .mobile-app .download {
     margin-bottom: 20px;
   }
