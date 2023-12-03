@@ -6,6 +6,9 @@ html,
 body {
 	height: 100%;
 }
+//body::-webkit-scrollbar { //disable vertical scroll bar in chrome
+	//display: none;
+//}
 body {
 	display: flex;
 	flex-direction: column;
