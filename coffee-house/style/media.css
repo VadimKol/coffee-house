@@ -223,6 +223,12 @@
     width: 468px;
     height: 468px;
   }
+  .menu-desc__title {
+    font-size: 32px;
+  }
+  .menu .grid-coffee, .menu .grid-tea, .menu .grid-dessert {
+    grid-template-areas: "a" "b" "c" "d";
+  }
   .footerbox-desc__title {
     font-size: 32px;
   }
