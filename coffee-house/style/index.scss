@@ -186,6 +186,7 @@
 				max-width: 100%;
 				transition: transform 0.5s;
 				transform: translate(-50%,-50%) scale(1.1);
+				object-fit: cover;
 				/*
 					width: 688px;
 					height: 688px;
@@ -221,6 +222,7 @@
 			max-width: 420px;
 			margin-top: 40px;
 			list-style-type: none;
+			flex-wrap: wrap;
 			&__appstore svg, 
 			&__gplay svg {
 				fill: transparent;

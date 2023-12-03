@@ -50,11 +50,9 @@
             }
         }
     }
-    .about .grid-item {
-        &__pic {
-            &:hover {
-                transform: translate(-50%,-50%) scale(1);
-            }
+    .about .grid-item__pic {
+        &:hover {
+            transform: translate(-50%,-50%) scale(1);
         }
     }
     .mobile-app .download-market {
@@ -263,6 +261,117 @@
         padding-bottom: 84px;
         &-desc {
             margin-bottom: 62px;
+        }
+    }
+}
+@media screen and (max-width: 784px) {
+    .wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .enjoy {
+        padding: 60px 0;
+        box-sizing: content-box;
+        padding-right: 7px;
+        &-desc {
+            margin-left: 15px;
+            &__title {
+                font-size: 42px;
+                line-height: 1.15;
+            }
+            &__text {
+                margin-bottom: 38px;
+            }
+            &__btn {
+                transform: translateX(1px);
+            }
+        }
+    }
+    .favorite-coffee {
+        &__title {
+            font-size: 32px;
+        }
+        .slider-box {
+            .slider__btn-left,
+            .slider__btn-right {
+                display: none;
+            }
+        }
+        .slider-item__pic {
+            width: 348px;
+            height: 348px;
+        }
+    }
+    .about {
+        &__title {
+            font-size: 32px;
+        }
+        .grid-item {
+            width: 468px;
+        }
+    }
+    .mobile-app {
+        .download {
+            &__title {
+                font-size: 32px;
+            }
+        }
+        &__img {
+            flex-basis: 468px;
+            width: 468px;
+            height: 468px;
+        }
+    }
+    .menu {
+        &-desc {
+            &__title {
+                font-size: 32px;
+            }
+        }
+        .grid {
+            &-coffee, 
+            &-tea, 
+            &-dessert {
+                grid-template-areas: "a"
+                                     "b"
+                                     "c"
+                                     "d";
+            }
+        }
+    }
+    .footerbox-desc__title {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 565px) {
+    .about .grid-item {
+        width: 348px;
+        &__pic {
+            width: 726px;
+            height: 726px;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    .mobile-app {
+        .download {
+            margin-bottom: 20px;
+            &-market {
+                li {
+                    margin-bottom: 14px;
+                    margin-right: 9px
+                }
+            }
+        }
+        &__img {
+            flex-basis: 348px;
+            width: 348px;
+            height: 348px;
+        }
+    }
+    .footerbox {
+        padding: 60px 16px 44px;
+        &-desc {
+            margin-bottom: 2px;
         }
     }
 }
