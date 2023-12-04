@@ -6,6 +6,7 @@
 	justify-content: flex-start;
 	box-sizing: content-box;
 	padding: 100px 100px 94px;
+	padding-left: clamp(60px, 7vw, 100px);
 	border-radius: 40px;
 	background-color: $border-dark;
 	&-desc {

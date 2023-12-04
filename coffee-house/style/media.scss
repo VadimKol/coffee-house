@@ -186,6 +186,25 @@
         flex-wrap: wrap;
     }
 }
+@media screen and (max-width: 1024px) {
+    .about .grid {
+        grid-template-areas: "a"
+                             "d";
+        grid-template-columns: minmax(auto, 688px);
+        justify-content: center;
+        &-item {
+            &-2, 
+            &-3 {
+                display: none;
+            }
+        }
+    }
+    .about .grid-item__pic {
+        transform: translate(-50%, -50%) scale(1.055);
+        width: 688px;
+        height: 688px;
+    }
+}
 @media screen and (max-width: 835px) {
     .favorite-coffee .slider {
         &__btn-left {
@@ -195,17 +214,10 @@
             right: 0px;
         }
     }
-    .about .grid-item__pic {
-        transform: translate(-50%, -50%) scale(1.055);
-        width: 688px;
-        height: 688px;
-    }
 }
 @media screen and (max-width: 817px) {
     .enjoy-desc {
-        margin-left: 60px;
         &__btn {
-            //padding: 20px 88px 20px 69px;
             padding: 20px 93px 20px 64px;
             transform: translateX(0px);
             &:hover {//заглушка, если ховерят на десктопе
@@ -219,7 +231,6 @@
         }
     }
     .footerbox {
-        padding-left: 60px;
         padding-bottom: 84px;
         &-desc {
             margin-bottom: 62px;
@@ -248,31 +259,20 @@
             }
         }
     }
-    .about .grid {
-        grid-template-areas: "a"
-                             "d";
-        grid-template-columns: 1fr;
-        &-item {
-            &-2, 
-            &-3 {
-                display: none;
-            }
-        }
-    }
 }
 @media screen and (max-width: 767px) {
     .wrapper {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: clamp(16px, 3.5vw, 40px);
+        padding-right: clamp(16px, 3.5vw, 40px);
     }
     .enjoy {
-        padding: 60px 0;
+        padding: clamp(60px, 7.5vw, 100px) 0;
         box-sizing: content-box;
         padding-right: 7px;
         &-desc {
-            margin-left: 15px;
+            margin-left: clamp(15px, 3.5vw, 60px);
             &__title {
-                font-size: 42px; //font-size: clamp(42px, 5vw, 72px);
+                font-size: clamp(42px, 10vw, 72px);
                 line-height: 1.15;
             }
             &__text {
@@ -285,7 +285,7 @@
     }
     .favorite-coffee {
         &__title {
-            font-size: 32px;//font-size: clamp(32px, 4vw, 60px);
+            font-size: clamp(32px, 8vw, 60px);
         }
         .slider-box {
             .slider__btn-left,
@@ -294,19 +294,19 @@
             }
         }
         .slider-item__pic {
-            width: 348px;
-            height: 348px;
+            width: clamp(348px, 63vw, 480px);
+            height: clamp(348px, 63vw, 480px);
         }
     }
     .about {
         &__title {
-            font-size: 32px;
+            font-size: clamp(32px, 8vw, 60px);
         }
     }
     .mobile-app {
         .download {
             &__title {
-                font-size: 32px;
+                font-size: clamp(32px, 8vw, 60px);
             }
         }
         &__img {
@@ -317,7 +317,7 @@
     }
     .menu {
         &-desc__title {
-            font-size: 32px;
+            font-size: clamp(32px, 8vw, 60px);
         }
         .grid {
             &-coffee, 
@@ -330,8 +330,11 @@
             }
         }
     }
+    .footerbox {
+        padding-left: clamp(16px, 4vw, 60px);
+    }
     .footerbox-desc__title {
-        font-size: 32px;
+        font-size: clamp(32px, 7vw, 60px);
     }
 }
 @media screen and (max-width: 565px) {
@@ -352,9 +355,40 @@
         }
     }
     .footerbox {
-        padding: 60px 16px 44px;
+        padding-top: 60px;
+        padding-right: 16px;
+        padding-bottom: 44px;
         &-desc {
             margin-bottom: 2px;
+        }
+    }
+}
+@media screen and (max-width: 379px) {
+    .favorite-coffee {
+        .slider-item__pic {
+            width: calc(100vw - 32px);
+            height: calc(100vw - 32px);
+        }
+    }
+    .mobile-app {
+        &__img {
+            flex-basis: auto;
+            width: calc(100vw - 32px);
+            height: calc(100vw - 32px);
+        }
+    }
+    .menu {
+        &-tab {
+            flex-direction: column;
+        }
+        .grid {
+            &-coffee, 
+            &-tea, 
+            &-dessert {
+                &-item {
+                    width: calc(100vw - 34px);
+                }
+            }
         }
     }
 }
