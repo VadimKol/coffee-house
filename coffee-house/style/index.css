@@ -172,6 +172,7 @@ img {
   justify-content: flex-start;
   box-sizing: content-box;
   padding: 100px 100px 94px;
+  padding-left: clamp(60px, 7vw, 100px);
   border-radius: 40px;
   background-color: #665F55;
 }
@@ -267,7 +268,7 @@ img {
 }
 .enjoy-desc {
   max-width: 518px;
-  margin-left: 101px;
+  margin-left: clamp(60px, 7.5vw, 101px);
 }
 .enjoy-desc__title {
   margin-bottom: 41px;
@@ -496,7 +497,6 @@ img {
 }
 
 /*Block-pages*/
-.enjoy,
 .favorite-coffee {
   padding: 100px 0;
 }
@@ -506,6 +506,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  padding: 100px 0;
 }
 
 .about,
