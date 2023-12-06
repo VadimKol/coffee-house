@@ -125,8 +125,6 @@
   }
   .about .grid-item__pic {
     transform: translate(-50%, -50%) scale(1.055);
-    width: 688px;
-    height: 688px;
   }
 }
 @media screen and (max-width: 835px) {
@@ -196,30 +194,18 @@
   .enjoy-desc__btn {
     transform: translateX(1px);
   }
-  .favorite-coffee__title {
+  .favorite-coffee__title,
+  .about__title,
+  .mobile-app .download__title,
+  .menu-desc__title {
     font-size: clamp(32px, 8vw, 60px);
   }
   .favorite-coffee .slider-box .slider__btn-left,
   .favorite-coffee .slider-box .slider__btn-right {
     display: none;
   }
-  .favorite-coffee .slider-item__pic {
-    width: clamp(348px, 63vw, 480px);
-    height: clamp(348px, 63vw, 480px);
-  }
-  .about__title {
-    font-size: clamp(32px, 8vw, 60px);
-  }
-  .mobile-app .download__title {
-    font-size: clamp(32px, 8vw, 60px);
-  }
-  .mobile-app__img {
-    flex-basis: 468px;
-    width: 468px;
-    height: 468px;
-  }
-  .menu-desc__title {
-    font-size: clamp(32px, 8vw, 60px);
+  .about .grid-item__pic {
+    transform: translate(-50%, -50%) scale(1.23);
   }
   .menu .grid-coffee, .menu .grid-tea, .menu .grid-dessert {
     grid-template-areas: "a" "b" "c" "d";
@@ -239,11 +225,6 @@
     margin-bottom: 14px;
     margin-right: 9px;
   }
-  .mobile-app__img {
-    flex-basis: 348px;
-    width: 348px;
-    height: 348px;
-  }
   .footerbox {
     padding-top: 60px;
     padding-right: 16px;
@@ -254,20 +235,13 @@
   }
 }
 @media screen and (max-width: 379px) {
-  .favorite-coffee .slider-item__pic {
-    width: calc(100vw - 32px);
-    height: calc(100vw - 32px);
-  }
-  .mobile-app__img {
-    flex-basis: auto;
-    width: calc(100vw - 32px);
-    height: calc(100vw - 32px);
-  }
   .menu-tab {
     flex-direction: column;
   }
+}
+@media screen and (max-width: 342px) {
   .menu .grid-coffee-item, .menu .grid-tea-item, .menu .grid-dessert-item {
-    width: calc(100vw - 34px);
+    width: calc(100% - 2px);
   }
 }
 .disable-btn,
