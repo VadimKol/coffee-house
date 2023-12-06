@@ -102,7 +102,6 @@
 				height: 4px;
 				border-radius: 100px;
 				background-color: $border-light;
-				transition: background-color 0.5s;
 				&--active {
 					background-color: $border-dark;
 				}
@@ -113,12 +112,12 @@
 			position: absolute;
 			top: 290px;
 			height: 60px;
+			width: 60px;
+			border: 1px solid $border-dark;
+			border-radius: 100%;
+			transition: background-color 0.5s;
 			svg {
-				fill: transparent;
-				transition: fill 0.5s;
-				rect {
-					stroke: $border-dark;
-				}
+				transform: translate(0px, 1px);
 				path {
 					stroke: $text-dark;
 					transition: stroke 0.5s;
@@ -218,16 +217,40 @@
 			margin-top: 40px;
 			list-style-type: none;
 			flex-wrap: wrap;
-			&__appstore svg, 
-			&__gplay svg {
-				fill: transparent;
-				transition: fill 0.5s;
-				rect {
-					stroke: $border-dark;
+			&__appstore,
+			&__gplay {
+				display: flex;
+				justify-content: flex-start;
+				width: 200px;
+				height: 64px;
+				border: 1px solid $border-dark;
+				border-radius: 100px;
+				box-sizing: border-box;
+				padding: 13px 21px 11px 19px;
+				transition: background-color 0.5s;
+				svg {
+					margin-right: 8px;
+					path {
+						fill: $text-dark;
+						transition: fill 0.5s;
+					}
 				}
-				path {
-					fill: $text-dark;
-					transition: fill 0.5s;
+			}
+			&-desc {
+				font-size: 10px;
+				font-weight: 600;
+				line-height: 1.4;
+				color: $text-dark;
+				display: flex;
+				flex-direction: column;
+				transition: color 0.5s;
+				transform: translate(0px, -2px);
+				span {
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 1.5;
+					display: inline-block;
+					transform: translate(0px, 2px);
 				}
 			}
 		}

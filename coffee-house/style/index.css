@@ -171,7 +171,7 @@ img {
   display: flex;
   justify-content: flex-start;
   box-sizing: content-box;
-  padding: 100px 100px 94px;
+  padding: 100px;
   padding-left: clamp(60px, 7vw, 100px);
   border-radius: 40px;
   background-color: #665F55;
@@ -197,12 +197,18 @@ img {
   max-width: 204px;
   list-style-type: none;
 }
+.footerbox-desc-social__item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 17px;
+  border: 1px solid #E1D4C9;
+  border-radius: 100%;
+  transition: background-color 0.5s;
+}
 .footerbox-desc-social__item svg {
   fill: transparent;
-}
-.footerbox-desc-social__item svg rect {
-  stroke: #C1B6AD;
-  transition: fill 0.5s, stroke 0.5s;
 }
 .footerbox-desc-social__item svg path {
   stroke: #E1D4C9;
@@ -362,7 +368,6 @@ img {
   height: 4px;
   border-radius: 100px;
   background-color: #C1B6AD;
-  transition: background-color 0.5s;
 }
 .favorite-coffee .slider-controls__item--active {
   background-color: #665F55;
@@ -371,13 +376,13 @@ img {
   position: absolute;
   top: 290px;
   height: 60px;
+  width: 60px;
+  border: 1px solid #665F55;
+  border-radius: 100%;
+  transition: background-color 0.5s;
 }
 .favorite-coffee .slider__btn-left svg, .favorite-coffee .slider__btn-right svg {
-  fill: transparent;
-  transition: fill 0.5s;
-}
-.favorite-coffee .slider__btn-left svg rect, .favorite-coffee .slider__btn-right svg rect {
-  stroke: #665F55;
+  transform: translate(0px, 1px);
 }
 .favorite-coffee .slider__btn-left svg path, .favorite-coffee .slider__btn-right svg path {
   stroke: #403F3D;
@@ -475,16 +480,40 @@ img {
   list-style-type: none;
   flex-wrap: wrap;
 }
-.mobile-app .download-market__appstore svg, .mobile-app .download-market__gplay svg {
-  fill: transparent;
-  transition: fill 0.5s;
+.mobile-app .download-market__appstore, .mobile-app .download-market__gplay {
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+  height: 64px;
+  border: 1px solid #665F55;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 13px 21px 11px 19px;
+  transition: background-color 0.5s;
 }
-.mobile-app .download-market__appstore svg rect, .mobile-app .download-market__gplay svg rect {
-  stroke: #665F55;
+.mobile-app .download-market__appstore svg, .mobile-app .download-market__gplay svg {
+  margin-right: 8px;
 }
 .mobile-app .download-market__appstore svg path, .mobile-app .download-market__gplay svg path {
   fill: #403F3D;
   transition: fill 0.5s;
+}
+.mobile-app .download-market-desc {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #403F3D;
+  display: flex;
+  flex-direction: column;
+  transition: color 0.5s;
+  transform: translate(0px, -2px);
+}
+.mobile-app .download-market-desc span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  display: inline-block;
+  transform: translate(0px, 2px);
 }
 .mobile-app__img {
   max-width: 630px;

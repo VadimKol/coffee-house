@@ -171,7 +171,7 @@ img {
   display: flex;
   justify-content: flex-start;
   box-sizing: content-box;
-  padding: 100px 100px 94px;
+  padding: 100px;
   padding-left: clamp(60px, 7vw, 100px);
   border-radius: 40px;
   background-color: #665F55;
@@ -197,12 +197,18 @@ img {
   max-width: 204px;
   list-style-type: none;
 }
+.footerbox-desc-social__item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 17px;
+  border: 1px solid #E1D4C9;
+  border-radius: 100%;
+  transition: background-color 0.5s;
+}
 .footerbox-desc-social__item svg {
   fill: transparent;
-}
-.footerbox-desc-social__item svg rect {
-  stroke: #C1B6AD;
-  transition: fill 0.5s, stroke 0.5s;
 }
 .footerbox-desc-social__item svg path {
   stroke: #E1D4C9;
@@ -302,34 +308,50 @@ img {
   display: flex;
   justify-content: space-between;
   max-width: 362px;
-  margin: 0 auto 34px;
+  margin: 0 auto 40px;
   list-style-type: none;
 }
-.menu-tab__btn svg {
-  fill: transparent;
+.menu-tab li:nth-child(1) .menu-tab__btn {
+  width: 116px;
 }
-.menu-tab__btn svg .circle-stroke {
-  stroke: #C1B6AD;
-  transition: fill 0.5s, stroke 0.5s;
+.menu-tab li:nth-child(2) .menu-tab__btn {
+  width: 91px;
+}
+.menu-tab li:nth-child(3) .menu-tab__btn {
+  width: 125px;
+}
+.menu-tab__btn {
+  display: flex;
+  box-sizing: border-box;
+  padding: 7px 17px 9px 7px;
+  height: 46px;
+  border: 1px solid #C1B6AD;
+  border-radius: 100px;
+  transition: background-color 0.5s;
+}
+.menu-tab__btn svg {
+  margin-right: 6px;
 }
 .menu-tab__btn svg .circle-img {
   fill: #C1B6AD;
   transition: fill 0.5s;
 }
-.menu-tab__btn svg .text {
-  fill: #403F3D;
-  transition: fill 0.5s;
+.menu-tab__btn span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  transform: translate(2px, 3px);
+  color: #403F3D;
+  transition: color 0.5s;
 }
-.menu-tab__btn--active svg {
-  fill: transparent;
+.menu-tab__btn--active {
+  background-color: #665F55;
 }
-.menu-tab__btn--active svg .circle-stroke {
-  stroke: #665F55;
-  fill: #665F55;
-}
-.menu-tab__btn--active svg .circle-img,
-.menu-tab__btn--active svg .text {
+.menu-tab__btn--active svg .circle-img {
   fill: #E1D4C9;
+}
+.menu-tab__btn--active span {
+  color: #E1D4C9;
 }
 .menu .grid {
   margin-bottom: 100px;

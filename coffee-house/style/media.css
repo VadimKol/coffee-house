@@ -12,36 +12,32 @@
   .enjoy-desc__btn:hover::after {
     opacity: 1;
   }
-  .favorite-coffee .slider-controls__item:hover {
+  .favorite-coffee .slider__btn-left:hover, .favorite-coffee .slider__btn-right:hover {
     background-color: #665F55;
-    cursor: pointer;
   }
-  .favorite-coffee .slider-controls__item--active:hover {
-    user-select: none;
-    cursor: default;
-  }
-  .favorite-coffee .slider__btn-left svg:hover, .favorite-coffee .slider__btn-right svg:hover {
-    fill: #665F55;
-  }
-  .favorite-coffee .slider__btn-left svg:hover path, .favorite-coffee .slider__btn-right svg:hover path {
+  .favorite-coffee .slider__btn-left:hover svg path, .favorite-coffee .slider__btn-right:hover svg path {
     stroke: #E1D4C9;
   }
   .about .grid-item__pic:hover {
     transform: translate(-50%, -50%) scale(1);
   }
-  .mobile-app .download-market__appstore svg:hover, .mobile-app .download-market__gplay svg:hover {
-    fill: #665F55;
+  .mobile-app .download-market__appstore:hover, .mobile-app .download-market__gplay:hover {
+    background-color: #665F55;
   }
-  .mobile-app .download-market__appstore svg:hover path, .mobile-app .download-market__gplay svg:hover path {
+  .mobile-app .download-market__appstore:hover svg path, .mobile-app .download-market__gplay:hover svg path {
     fill: #E1D4C9;
   }
-  .menu-tab__btn svg:hover .circle-stroke {
-    stroke: #665F55;
-    fill: #665F55;
+  .mobile-app .download-market__appstore:hover .download-market-desc, .mobile-app .download-market__gplay:hover .download-market-desc {
+    color: #E1D4C9;
   }
-  .menu-tab__btn svg:hover .circle-img,
-  .menu-tab__btn svg:hover .text {
+  .menu-tab__btn:hover {
+    background-color: #665F55;
+  }
+  .menu-tab__btn:hover svg .circle-img {
     fill: #E1D4C9;
+  }
+  .menu-tab__btn:hover span {
+    color: #E1D4C9;
   }
   .menu-tab__btn--active:hover {
     user-select: none;
@@ -50,11 +46,10 @@
   .menu .grid-coffee-item:hover .grid-coffee-item-box__pic, .menu .grid-tea-item:hover .grid-coffee-item-box__pic, .menu .grid-dessert-item:hover .grid-coffee-item-box__pic {
     transform: translate(-50%, -50%) scale(1);
   }
-  .footerbox-desc-social__item svg:hover rect {
-    stroke: #E1D4C9;
-    fill: #E1D4C9;
+  .footerbox-desc-social__item:hover {
+    background-color: #E1D4C9;
   }
-  .footerbox-desc-social__item svg:hover path {
+  .footerbox-desc-social__item:hover svg path {
     stroke: #403F3D;
   }
   .footerbox-connect-list__address:hover::after, .footerbox-connect-list__tel:hover::after {
@@ -80,7 +75,7 @@
   }
   .mobile-app .download {
     flex-basis: auto;
-    margin-bottom: 94px;
+    margin-bottom: 100px;
   }
   .mobile-app .download__title {
     margin: 100px 0 40px;
@@ -152,7 +147,7 @@
     padding-bottom: 84px;
   }
   .footerbox-desc {
-    margin-bottom: 62px;
+    margin-bottom: 68px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -222,7 +217,7 @@
     margin-bottom: 20px;
   }
   .mobile-app .download-market li {
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     margin-right: 9px;
   }
   .footerbox {
@@ -231,12 +226,15 @@
     padding-bottom: 44px;
   }
   .footerbox-desc {
-    margin-bottom: 2px;
+    margin-bottom: 8px;
   }
 }
 @media screen and (max-width: 379px) {
   .menu-tab {
     flex-direction: column;
+  }
+  .menu-tab__btn {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 342px) {
