@@ -30,3 +30,5 @@ function HideMobile(){
 }
 
 window.onresize = HideMobile;
+
+let start = "Start new task!";
