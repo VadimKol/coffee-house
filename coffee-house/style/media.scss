@@ -25,26 +25,12 @@
         }
     }
     .favorite-coffee .slider {
-		&-controls__item {
-            &:hover {
-                background-color: $border-dark;
-                cursor: pointer;
-            }
-            &--active {
-                &:hover {
-                    user-select: none;
-                    cursor: default;
-                }
-            }
-		}
         &__btn-left, 
         &__btn-right {
-            svg {
-                &:hover {
-                    fill: $border-dark;
-                    path {
-                        stroke: $text-light;
-                    }
+            &:hover {
+                background-color: $border-dark;
+                svg path {
+                    stroke: $text-light;
                 }
             }
         }
@@ -55,27 +41,27 @@
         }
     }
     .mobile-app .download-market {
-        &__appstore svg, 
-        &__gplay svg {
+        &__appstore,
+        &__gplay {
             &:hover {
-                fill: $border-dark;
-                path {
+                background-color: $border-dark;
+                svg path {
                     fill: $text-light;
+                }
+                .download-market-desc {
+                    color: $text-light;
                 }
             }
         }
     }
     .menu-tab__btn {
-        svg {
-            &:hover {
-                .circle-stroke {
-                    stroke: $border-dark;
-                    fill: $border-dark;
-                }
-                .circle-img,
-                .text {
-                    fill: $text-light;
-                }
+        &:hover {
+            background-color: $border-dark;
+            svg .circle-img {
+                fill: $text-light;
+            }
+            span {
+                color: $text-light;
             }
         }
         &--active {
@@ -97,13 +83,10 @@
         }
     }
     .footerbox {
-        &-desc-social__item svg {
+        &-desc-social__item {
             &:hover {
-                rect {
-                    stroke: $text-light;
-                    fill: $text-light;
-                }
-                path {
+                background-color: $text-light;
+                svg path {
                     stroke: $text-dark;
                 }
             }
@@ -146,7 +129,7 @@
         justify-content: center;
         .download {
             flex-basis: auto;
-            margin-bottom: 94px;
+            margin-bottom: 100px;
             &__title {
                 margin: 100px 0 40px;
             }
@@ -197,12 +180,10 @@
             &-3 {
                 display: none;
             }
+            &__pic {
+                transform: translate(-50%, -50%) scale(1.055);
+            }
         }
-    }
-    .about .grid-item__pic {
-        transform: translate(-50%, -50%) scale(1.055);
-        width: 688px;
-        height: 688px;
     }
 }
 @media screen and (max-width: 835px) {
@@ -233,7 +214,7 @@
     .footerbox {
         padding-bottom: 84px;
         &-desc {
-            margin-bottom: 62px;
+            margin-bottom: 68px;
         }
     }
 }
@@ -283,51 +264,31 @@
             }
         }
     }
-    .favorite-coffee {
-        &__title {
-            font-size: clamp(32px, 8vw, 60px);
-        }
-        .slider-box {
-            .slider__btn-left,
-            .slider__btn-right {
-                display: none;
-            }
-        }
-        .slider-item__pic {
-            width: clamp(348px, 63vw, 480px);
-            height: clamp(348px, 63vw, 480px);
-        }
-    }
-    .about {
+    .favorite-coffee,
+    .about,
+    .mobile-app .download,
+    .menu-desc {
         &__title {
             font-size: clamp(32px, 8vw, 60px);
         }
     }
-    .mobile-app {
-        .download {
-            &__title {
-                font-size: clamp(32px, 8vw, 60px);
-            }
-        }
-        &__img {
-            flex-basis: 468px;
-            width: 468px;
-            height: 468px;
+    .favorite-coffee .slider-box {
+        .slider__btn-left,
+        .slider__btn-right {
+            display: none;
         }
     }
-    .menu {
-        &-desc__title {
-            font-size: clamp(32px, 8vw, 60px);
-        }
-        .grid {
-            &-coffee, 
-            &-tea, 
-            &-dessert {
-                grid-template-areas: "a"
-                                     "b"
-                                     "c"
-                                     "d";
-            }
+    .about .grid-item__pic {
+        transform: translate(-50%, -50%) scale(1.23);
+    }
+    .menu .grid {
+        &-coffee, 
+        &-tea, 
+        &-dessert {
+            grid-template-areas: "a"
+                                 "b"
+                                 "c"
+                                 "d";
         }
     }
     .footerbox {
@@ -338,20 +299,13 @@
     }
 }
 @media screen and (max-width: 565px) {
-    .mobile-app {
-        .download {
-            margin-bottom: 20px;
-            &-market {
-                li {
-                    margin-bottom: 14px;
-                    margin-right: 9px
-                }
+    .mobile-app .download {
+        margin-bottom: 20px;
+        &-market {
+            li {
+                margin-bottom: 20px;
+                margin-right: 9px
             }
-        }
-        &__img {
-            flex-basis: 348px;
-            width: 348px;
-            height: 348px;
         }
     }
     .footerbox {
@@ -359,35 +313,25 @@
         padding-right: 16px;
         padding-bottom: 44px;
         &-desc {
-            margin-bottom: 2px;
+            margin-bottom: 8px;
         }
     }
 }
 @media screen and (max-width: 379px) {
-    .favorite-coffee {
-        .slider-item__pic {
-            width: calc(100vw - 32px);
-            height: calc(100vw - 32px);
+    .menu-tab {
+        flex-direction: column;
+        &__btn {
+            margin-bottom: 10px;
         }
     }
-    .mobile-app {
-        &__img {
-            flex-basis: auto;
-            width: calc(100vw - 32px);
-            height: calc(100vw - 32px);
-        }
-    }
-    .menu {
-        &-tab {
-            flex-direction: column;
-        }
-        .grid {
-            &-coffee, 
-            &-tea, 
-            &-dessert {
-                &-item {
-                    width: calc(100vw - 34px);
-                }
+}
+@media screen and (max-width: 342px) {
+    .menu .grid {
+        &-coffee, 
+        &-tea, 
+        &-dessert {
+            &-item {
+                width: calc(100% - 2px);
             }
         }
     }
