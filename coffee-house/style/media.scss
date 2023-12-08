@@ -225,7 +225,7 @@
             display: none;
         }
         &-btn-mobile-equal {//бургер-меню
-            display: block;
+            display: flex;
         }
         &--mobile {
             .nav-list,
@@ -239,6 +239,12 @@
 				}
             }
         }
+    }
+    .nav--mobile {
+        display: flex;
+    }
+    .wrap-mobile {
+        display: block;
     }
 }
 @media screen and (max-width: 767px) {
@@ -336,13 +342,14 @@
         }
     }
 }
-.disable-btn,
-.disable-mobile {
-	display: none;
-}
-.active-btn {
-	display: block;
-}
 .active-mobile {
-	display: flex;
+    left: 0;
+}
+.cross-btn {
+    .nav-btn-mobile-equal__first {
+        transform: rotate(45deg);
+    }
+    .nav-btn-mobile-equal__second {
+        transform: rotate(-45deg);
+    }
 }

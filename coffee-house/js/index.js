@@ -1,34 +1,45 @@
 const addClass = (to, which_class) => document.querySelector(to).classList.add(which_class);
 const removeClass = (from, which_class) => document.querySelector(from).classList.remove(which_class);
-function ShowMobileMenu() {
-    removeClass(".nav-btn-mobile-equal", "active-btn");
-    removeClass(".nav-btn-mobile-cross", "disable-btn");
-    removeClass(".nav--mobile", "disable-mobile");
+const toggleClass = (from, which_class) => document.querySelector(from).classList.toggle(which_class);
 
-    addClass(".nav-btn-mobile-equal", "disable-btn");
-    addClass(".nav-btn-mobile-cross", "active-btn");
-    addClass(".nav--mobile", "active-mobile");
+//const afterTransition = (element, callback) => { // НЕ МОЯ НЕЛЬЗЯ
+    //element.addEventListener('transitionend', callback, false);
+//};
+
+function ToggleDisplayMobile() {
+    toggleClass(".nav--mobile", "display-mobile");
 }
-function HideMobileMenu() {
-    removeClass(".nav-btn-mobile-equal", "disable-btn");
-    removeClass(".nav-btn-mobile-cross", "active-btn");
-    removeClass(".nav--mobile", "active-mobile");
-
-    addClass(".nav-btn-mobile-equal", "active-btn");
-    addClass(".nav-btn-mobile-cross", "disable-btn");
-    addClass(".nav--mobile", "disable-mobile");
+function ToggleActiveMobile() {
+    toggleClass(".nav--mobile", "active-mobile");
+}
+function ToggleMobileMenu() {
+    toggleClass(".nav-btn-mobile-equal","cross-btn");
+    toggleClass(".nav--mobile", "active-mobile");
+/*
+    //setTimeout(function request() {
+      
+        if (document.querySelector(".nav--mobile").classList[3] === "active-mobile") {
+            setTimeout(ToggleDisplayMobile, 800);
+            //document.querySelector(".nav--mobile").transition().on("end", ToggleDisplayMobile);
+            //afterTransition(document.querySelector(".nav--mobile"),ToggleDisplayMobile);
+            //console.log(3000);
+        } else {
+            //setTimeout(ToggleDisplayMobile);
+            ToggleDisplayMobile();
+            //document.querySelector(".nav--mobile").removeEventListener('transitionend', ToggleDisplayMobile, false);
+            //console.log(1000);
+        }
+        setTimeout(ToggleActiveMobile, 50); // не пойму почему сдвига нет, это время самой анимации чтоли
+        //ToggleActiveMobile();// не работает transition  не пойму нифига
+      //});
+      */
 }
 function HideMobile(){
-    if (window.innerWidth > "835") {
-        removeClass(".nav-btn-mobile-equal", "disable-btn");
-        removeClass(".nav-btn-mobile-cross", "disable-btn");
-        removeClass(".nav-btn-mobile-equal", "active-btn");
-        removeClass(".nav-btn-mobile-cross", "active-btn");
+    if (window.innerWidth > "768") {
+        removeClass(".nav-btn-mobile-equal", "cross-btn");
         removeClass(".nav--mobile", "active-mobile");
-        removeClass(".nav--mobile", "disable-mobile");
+        removeClass(".nav--mobile", "display-mobile");
     }
 }
 
 window.onresize = HideMobile;
-
-let start = "Start new task!";

@@ -19,7 +19,11 @@
     &-list {
         transform: translate(0px, -2px);
     }
-    
+    &--mobile {
+        .nav__btn-menu {
+            cursor: pointer;
+        }
+    }
 }
 @media screen and (max-width: 835px) {//так как header и media общие, приходиться писать здесь
     .nav--mobile .nav__btn-menu {
