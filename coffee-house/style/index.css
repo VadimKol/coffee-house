@@ -286,7 +286,19 @@ img {
 }
 
 .enjoy {
+  position: relative;
   margin-top: 20px;
+  border-radius: 40px;
+}
+.enjoy-video {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
   border-radius: 40px;
 }
 .enjoy-desc {
@@ -544,10 +556,6 @@ img {
 }
 
 .enjoy {
-  background-image: url(../img/main/hero.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   padding: 100px 0;
 }
 
