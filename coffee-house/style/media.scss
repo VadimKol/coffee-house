@@ -186,6 +186,16 @@
         }
     }
 }
+@media screen and (max-width: 903px) {
+    .favorite-coffee {
+        .slider {
+            &__btn-left, 
+            &__btn-right {
+                top: 580px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 835px) {
     .favorite-coffee .slider {
         &__btn-left {
@@ -278,7 +288,7 @@
             font-size: clamp(32px, 8vw, 60px);
         }
     }
-    .favorite-coffee .slider-box {
+    .favorite-coffee {
         .slider__btn-left,
         .slider__btn-right {
             display: none;
@@ -341,6 +351,9 @@
             }
         }
     }
+}
+.disable-btn {
+	pointer-events: none;//с этой штукой проблема, она криво работает, то работает то нет
 }
 .active-mobile {
     left: 0;

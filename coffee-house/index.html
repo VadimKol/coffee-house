@@ -64,37 +64,37 @@
             <h2 class="favorite-coffee__title">Choose your <span class="favorite-coffee__subtitle">favorite</span> coffee</h2>
             <div class="slider-box">
                 <div class="slider">
-                    <div class="slider-item slider-item--active">
-                        <img class="slider-item__pic" src="img/main/coffee-slider-1.png" alt="S’mores Frappuccino" width="530" height="530">
+                    <div class="slider-item slider-item--active" id="first">
+                        <img class="slider-item__pic" src="img/main/coffee-slider-1.png" alt="S’mores Frappuccino" width="530" height="530" draggable="false">
                         <p class="slider-item__type">S’mores Frappuccino</p>
                         <p class="slider-item__desc">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                         <p class="slider-item__price">$5.50</p>
                     </div>
-                    <div class="slider-item">
-                        <img class="slider-item__pic" src="img/main/coffee-slider-2.png" alt="Caramel Macchiato" width="530" height="530">
+                    <div class="slider-item" id="second">
+                        <img class="slider-item__pic" src="img/main/coffee-slider-2.png" alt="Caramel Macchiato" width="530" height="530" draggable="false">
                         <p class="slider-item__type">Caramel Macchiato</p>
                         <p class="slider-item__desc">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
                         <p class="slider-item__price">$5.00</p>
                     </div>
-                    <div class="slider-item">
-                        <img class="slider-item__pic" src="img/main/coffee-slider-3.png" alt="Ice coffee" width="530" height="530">
+                    <div class="slider-item" id="third">
+                        <img class="slider-item__pic" src="img/main/coffee-slider-3.png" alt="Ice coffee" width="530" height="530" draggable="false">
                         <p class="slider-item__type">Ice coffee</p>
                         <p class="slider-item__desc">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
                         <p class="slider-item__price">$4.50</p>
                     </div>
                 </div>
-                <ul class="slider-controls">
-                    <li class="slider-controls__item slider-controls__item--active"></li>
-                    <li class="slider-controls__item"></li>
-                    <li class="slider-controls__item"></li>
-                </ul>
-                <button class="slider__btn-left" type="button">
-                    <svg width="24" height="24"><path stroke-linecap="round" d="M18.5 12H6m0 0 6-6m-6 6 6 6"/></svg>
-                </button>
-                <button class="slider__btn-right" type="button">
-                    <svg width="24" height="24"><path stroke-linecap="round" d="M6 12h12.5m0 0-6-6m6 6-6 6"/></svg>
-                </button>
             </div>
+            <ul class="slider-controls">
+                <li class="slider-controls__item slider-controls__item--active" id="firstControl"><span class="progression"></span></li>
+                <li class="slider-controls__item" id="secondControl"><span></span></li>
+                <li class="slider-controls__item" id="thirdControl"><span></span></li>
+            </ul>
+            <button class="slider__btn-left" type="button">
+                <svg width="24" height="24"><path stroke-linecap="round" d="M18.5 12H6m0 0 6-6m-6 6 6 6"/></svg>
+            </button>
+            <button class="slider__btn-right" type="button">
+                <svg width="24" height="24"><path stroke-linecap="round" d="M6 12h12.5m0 0-6-6m6 6-6 6"/></svg>
+            </button>
         </div>
         <div class="about" id="About">
             <h2 class="about__title">Resource is <span class="about__subtitle">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
@@ -181,5 +181,6 @@
         </div>
     </footer>
     <script src="js/index.js" defer></script>
+    <script src="js/slider.js" defer></script>
 </body>
 </html>
