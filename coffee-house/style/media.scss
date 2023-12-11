@@ -66,7 +66,6 @@
         }
         &--active {
             &:hover {
-                user-select: none;
                 cursor: default;
             }
         }
@@ -76,7 +75,9 @@
         &-tea, 
         &-dessert {
             &-item {
-                &:hover .grid-coffee-item-box__pic {
+                &:hover .grid-coffee-item-box__pic,
+                &:hover .grid-tea-item-box__pic,
+                &:hover .grid-dessert-item-box__pic {
                     transform: translate(-50%,-50%) scale(1);
                 }
             }
@@ -111,16 +112,26 @@
     }
     .menu .grid {
         &-coffee, 
+        &-dessert,
+        &-tea {
+            grid-template-areas: "a b"
+                                 "c d";
+            justify-content: center;
+        }
+        &-coffee, 
         &-dessert {
-            grid-template-areas: "a b c"
-                                 "d e f";
             &-item {
+                &-5,
+                &-6,
                 &-7,
                 &-8 {
                     display: none;
                 }
             }
         }
+    }
+    .menu .grid-add {
+        display: block;
     }
 }
 @media screen and (max-width: 1330px) {
@@ -142,26 +153,6 @@
         &-desc {
             margin-right: 0;
         }
-    }
-}
-@media screen and (max-width: 1107px) {
-    .menu .grid {
-        margin-bottom: 40px;
-        &-coffee, 
-        &-dessert {
-            grid-template-areas: "a b"
-                                 "c d";
-            justify-content: center;
-            &-item {
-                &-5,
-                &-6 {
-                    display: none;
-                }
-            }
-        }
-    }
-    .menu .grid-add {
-        display: block;
     }
 }
 @media screen and (max-width: 1081px) {
@@ -365,4 +356,39 @@
     .nav-btn-mobile-equal__second {
         transform: rotate(-45deg);
     }
+}
+.menu .show-grid {
+    grid-template-areas: "a b"
+                         "c d"
+                         "e f"
+                         "g h";
+    & > div {
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8){
+            display: block;
+        }
+    }
+}
+.menu .show-mobile-grid {
+    grid-template-areas: "a"
+                         "b"
+                         "c"
+                         "d"
+                         "e"
+                         "f"
+                         "g"
+                         "h";
+    & > div {
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8){
+            display: block;
+        }
+    }
+}
+.menu .hide-btn {
+    display: none;
 }

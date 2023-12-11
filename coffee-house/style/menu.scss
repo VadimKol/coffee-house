@@ -89,6 +89,8 @@
             }
             &--active {
                 background-color: $border-dark;
+                pointer-events: none;
+                user-select: none;
                 svg .circle-img {
                     fill: $text-light;
                 }
@@ -128,6 +130,7 @@
         &-tea, 
         &-dessert {
             display: none;
+            opacity: 0;
             gap: 40px;
             &-item {
                 position: relative;
@@ -149,7 +152,7 @@
                         height: 100%;
                         transition: transform 0.5s;
                         transform: translate(-50%,-50%) scale(1.1);
-                        object-fit: cover;
+                        //object-fit: cover;//глаз дергается от него, толку нет все равно
                     }
                 }
                 &__type {
@@ -176,10 +179,9 @@
                 }
             }
         }
-        &-coffee {
-            &--active {
-                display: grid;
-            }
+        &--active {
+            display: grid;
+            opacity: 1;
         }
     }
     .grid-add {
@@ -188,7 +190,7 @@
         height: 60px;
         border: 1px solid $border-dark;
         border-radius: 100%;
-        margin: 0 auto 100px;
+        margin: -60px auto 100px;
         svg {
             fill: transparent;
             transform: translate(0px, 1px);
@@ -197,4 +199,24 @@
             }
         }
     }
+}
+.disable-grid {
+    pointer-events: none;
+    user-select: none;
+}
+.transition-fade-in {
+	animation-name: fadeIn;
+	animation-duration: 0.25s;
+}
+.transition-fade-out {
+	animation-name: fadeOut;
+	animation-duration: 0.25s;
+}
+@keyframes fadeOut {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }

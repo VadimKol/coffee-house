@@ -370,6 +370,8 @@ img {
 }
 .menu-tab__btn--active {
   background-color: #665F55;
+  pointer-events: none;
+  user-select: none;
 }
 .menu-tab__btn--active svg .circle-img {
   fill: #E1D4C9;
@@ -424,6 +426,7 @@ img {
 }
 .menu .grid-coffee, .menu .grid-tea, .menu .grid-dessert {
   display: none;
+  opacity: 0;
   gap: 40px;
 }
 .menu .grid-coffee-item, .menu .grid-tea-item, .menu .grid-dessert-item {
@@ -448,7 +451,6 @@ img {
   height: 100%;
   transition: transform 0.5s;
   transform: translate(-50%, -50%) scale(1.1);
-  object-fit: cover;
 }
 .menu .grid-coffee-item__type, .menu .grid-tea-item__type, .menu .grid-dessert-item__type {
   margin: 21px 0px 11px 19px;
@@ -469,8 +471,9 @@ img {
   font-weight: 600;
   line-height: 1.25;
 }
-.menu .grid-coffee--active {
+.menu .grid--active {
   display: grid;
+  opacity: 1;
 }
 .menu .grid-add {
   display: none;
@@ -478,7 +481,7 @@ img {
   height: 60px;
   border: 1px solid #665F55;
   border-radius: 100%;
-  margin: 0 auto 100px;
+  margin: -60px auto 100px;
 }
 .menu .grid-add svg {
   fill: transparent;
@@ -486,6 +489,38 @@ img {
 }
 .menu .grid-add svg path {
   stroke: #403F3D;
+}
+
+.disable-grid {
+  pointer-events: none;
+  user-select: none;
+}
+
+.transition-fade-in {
+  animation-name: fadeIn;
+  animation-duration: 0.25s;
+}
+
+.transition-fade-out {
+  animation-name: fadeOut;
+  animation-duration: 0.25s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
