@@ -200,6 +200,163 @@
         }
     }
 }
+/*Modal*/
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(64, 63, 61, 0.80);
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        color: $text-dark;
+        background-color: $text-light;
+        border-radius: 40px;
+        margin: auto;
+        max-width: 800px;
+        //max-height: 504px;
+        max-height: min-content;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        padding: 16px;
+        &__pic {
+            width: 309px;
+            height: 309px;
+            border-radius: 40px;
+            margin-right: 22px;
+        }
+        &-info {
+            &__type {
+                margin-bottom: 12px;
+            }
+            &__desc {
+                margin-bottom: 20px;
+            }
+            &__size {
+                margin-bottom: 7px;
+            }
+            &__add {
+                margin-top: 20px;
+                margin-bottom: 7px;
+            }
+            &-total {
+                margin-top: 19px;
+                margin-bottom: 19px;
+                position: relative;
+                &__price {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            &__type,
+            &-total {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.25;
+            }
+            &-list-s,
+            &-list-a {
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                align-items: baseline;
+                &__btn {
+                    box-sizing: border-box;
+                    margin-right: 8px;
+                    padding: 8px 16px 8px 6px;
+                    border: 1px solid $border-light;
+                    border-radius: 100px;
+                    font-weight: 600;
+                    transition: color 0.5s, background-color 0.5s, border 0.5s;
+                    span {
+                        color: $text-dark;
+                        border-radius: 100%;
+                        background-color: $border-light;
+                        margin-right: 8px;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        box-sizing: border-box;
+                        padding-top: 6px;
+                        transition: background-color 0.5s;
+                    }
+                    .hidden_price {
+                        display: none;
+                    }
+                }
+            }
+            &-list-s {
+                &__btn {
+                    &--active {
+                        background-color: $border-dark;
+                        border: 1px solid $border-dark;
+                        color: $text-light;
+                        pointer-events: none;
+                        user-select: none;
+                        span {
+                            background-color: $text-light;
+                        }
+                    }
+                }
+            }
+            &-list-a {
+                &__btn {
+                    &--active {
+                        background-color: $border-dark;
+                        border: 1px solid $border-dark;
+                        color: $text-light;
+                        //pointer-events: none;
+                        //user-select: none;
+                        span {
+                            background-color: $text-light;
+                        }
+                    }
+                }
+            }
+            &-alert {
+                position: relative;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 1.4;
+                border-top: 1px solid $border-light;
+                padding-top: 11px;
+                padding-left: 23px;
+                display: block;
+                margin-bottom: 32px;
+                span {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    left: -1px;
+                    top: 11px;
+                    background-image: url(../img/info.svg);
+                }
+            }
+            &__btn-close {
+                font-weight: 600;
+                border-radius: 100px;
+                border: 1px solid $border-dark;
+                width: 100%;
+                height: 44px;
+                transition: color 0.5s, background-color 0.5s;
+            }
+        }
+    }
+}
+
+.show-modal {
+    display: block;
+}
+.disable-scrolling {
+    overflow: hidden;
+}
 .disable-grid {
     pointer-events: none;
     user-select: none;
