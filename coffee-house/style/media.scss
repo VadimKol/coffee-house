@@ -397,6 +397,9 @@
 .active-mobile {
     left: 0;
 }
+.overflow-body {
+    overflow: hidden;
+}
 .cross-btn {
     .nav-btn-mobile-equal__first {
         transform: rotate(45deg);

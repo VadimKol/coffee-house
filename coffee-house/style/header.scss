@@ -90,6 +90,8 @@
 		z-index: 1;
 		transition: left 1s;
 		pointer-events: auto;
+		padding-top: 80px;
+    	height: 100vh;
 		.nav-list,
 		.nav__btn-menu {
 			font-size: 32px;
@@ -105,7 +107,7 @@
 			}
 		}
 		.nav__btn-menu {
-			margin-bottom: 324px;
+			margin-bottom: 494px;
 			&-icon {
 				width: 40px;
 				height: 40px;

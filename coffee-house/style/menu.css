@@ -149,6 +149,8 @@ img {
   z-index: 1;
   transition: left 1s;
   pointer-events: auto;
+  padding-top: 80px;
+  height: 100vh;
 }
 .nav--mobile .nav-list,
 .nav--mobile .nav__btn-menu {
@@ -165,7 +167,7 @@ img {
   text-align: center;
 }
 .nav--mobile .nav__btn-menu {
-  margin-bottom: 324px;
+  margin-bottom: 494px;
 }
 .nav--mobile .nav__btn-menu-icon {
   width: 40px;
